@@ -933,20 +933,24 @@ $.datepicker.setDefaults($.datepicker.regional['ru']);
 $( function() {  $( "#datecalend" ).datepicker();} );
 $( function() {  $( "#datecalendout" ).datepicker();} );
 
+
 // Скрипт удаления мест
-function del1(){$('#mesto1').addClass('hide');}
-function del2(){$('#mesto2').addClass('hide');}
-function del3(){$('#mesto3').addClass('hide');}
-function del4(){$('#mesto4').addClass('hide');}
-function del5(){$('#mesto5').addClass('hide');}
-function del6(){$('#mesto6').addClass('hide');}
-function del7(){$('#mesto7').addClass('hide');}
-function del8(){$('#mesto8').addClass('hide');}
-function del9(){$('#mesto9').addClass('hide');}
-function del10(){$('#mesto10').addClass('hide');}
+// function del1(){$('#mesto1').addClass('hide');}
+function del2(){$('#mesto2').addClass('hide'); $('#mesto2 input').removeAttr('required');}
+function del3(){$('#mesto3').addClass('hide'); $('#mesto3 input').removeAttr('required');}
+function del4(){$('#mesto4').addClass('hide'); $('#mesto4 input').removeAttr('required');}
+function del5(){$('#mesto5').addClass('hide'); $('#mesto5 input').removeAttr('required');}
+function del6(){$('#mesto6').addClass('hide'); $('#mesto6 input').removeAttr('required');}
+function del7(){$('#mesto7').addClass('hide'); $('#mesto7 input').removeAttr('required');}
+function del8(){$('#mesto8').addClass('hide'); $('#mesto8 input').removeAttr('required');}
+function del9(){$('#mesto9').addClass('hide'); $('#mesto9 input').removeAttr('required');}
+function del10(){$('#mesto10').addClass('hide'); $('#mesto10 input').removeAttr('required');}
 
 // Скрипт добавления мест
 function addmesto(){
+  $('.hide input:eq(0)').attr('required','required');
+  $('.hide input:eq(4)').attr('required','required');
+  $('.hide input:eq(6)').attr('required','required');
   $('.hide').first().removeClass('hide')
 }
 // Скрипт переключателя Габариты/объём
@@ -958,6 +962,10 @@ function perekF1(){
         $('.gabtext1').css('color','#000');
         $('.obyom1').css('display','none');
         $('.gabar1').css('display','inline-block'); 
+        $('#mesto1 input:eq(0)').removeAttr('required')
+        $('#mesto1 input:eq(1)').attr('required','required');
+        $('#mesto1 input:eq(2)').attr('required','required');
+        $('#mesto1 input:eq(3)').attr('required','required');
           } 
       else{
         $('.obyom1').css('display','inline-block'); 
@@ -965,6 +973,10 @@ function perekF1(){
         $('.touch1').css('margin', '2px');
         $('.obtext1').css('color','#000');
         $('.gabtext1').css('color','#B3B3B3');
+        $('#mesto1 input:eq(0)').attr('required','required');
+        $('#mesto1 input:eq(1)').removeAttr('required');
+        $('#mesto1 input:eq(2)').removeAttr('required');
+        $('#mesto1 input:eq(3)').removeAttr('required');
       }
  }
 //  2 место
@@ -975,6 +987,10 @@ function perekF2(){
              $('.gabtext2').css('color','#000');
              $('.obyom2').css('display','none');
              $('.gabar2').css('display','inline-block'); 
+             $('#mesto2 input:eq(0)').removeAttr('required')
+             $('#mesto2 input:eq(1)').attr('required','required');
+             $('#mesto2 input:eq(2)').attr('required','required');
+             $('#mesto2 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom2').css('display','inline-block'); 
@@ -982,6 +998,10 @@ function perekF2(){
              $('.touch2').css('margin', '2px');
              $('.obtext2').css('color','#000');
              $('.gabtext2').css('color','#B3B3B3');
+             $('#mesto2 input:eq(0)').attr('required','required');
+             $('#mesto2 input:eq(1)').removeAttr('required');
+             $('#mesto2 input:eq(2)').removeAttr('required');
+             $('#mesto2 input:eq(3)').removeAttr('required');
           }
      }
 // 3 место
@@ -992,6 +1012,10 @@ function perekF3(){
              $('.gabtext3').css('color','#000');
              $('.obyom3').css('display','none');
              $('.gabar3').css('display','inline-block'); 
+             $('#mesto3 input:eq(0)').removeAttr('required')
+             $('#mesto3 input:eq(1)').attr('required','required');
+             $('#mesto3 input:eq(2)').attr('required','required');
+             $('#mesto3 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom3').css('display','inline-block'); 
@@ -999,6 +1023,10 @@ function perekF3(){
              $('.touch3').css('margin', '2px');
              $('.obtext3').css('color','#000');
              $('.gabtext3').css('color','#B3B3B3');
+             $('#mesto3 input:eq(0)').attr('required','required');
+             $('#mesto3 input:eq(1)').removeAttr('required');
+             $('#mesto3 input:eq(2)').removeAttr('required');
+             $('#mesto3 input:eq(3)').removeAttr('required');
           }
      }
 // 4 место
@@ -1009,6 +1037,10 @@ function perekF4(){
              $('.gabtext4').css('color','#000');
              $('.obyom4').css('display','none');
              $('.gabar4').css('display','inline-block'); 
+             $('#mesto4 input:eq(0)').removeAttr('required')
+             $('#mesto4 input:eq(1)').attr('required','required');
+             $('#mesto4 input:eq(2)').attr('required','required');
+             $('#mesto4 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom4').css('display','inline-block'); 
@@ -1016,6 +1048,10 @@ function perekF4(){
              $('.touch4').css('margin', '2px');
              $('.obtext4').css('color','#000');
              $('.gabtext4').css('color','#B3B3B3');
+             $('#mesto4 input:eq(0)').attr('required','required');
+             $('#mesto4 input:eq(1)').removeAttr('required');
+             $('#mesto4 input:eq(2)').removeAttr('required');
+             $('#mesto4 input:eq(3)').removeAttr('required');
           }
      }
 // 5 место
@@ -1026,6 +1062,10 @@ function perekF5(){
              $('.gabtext5').css('color','#000');
              $('.obyom5').css('display','none');
              $('.gabar5').css('display','inline-block'); 
+             $('#mesto5 input:eq(0)').removeAttr('required')
+             $('#mesto5 input:eq(1)').attr('required','required');
+             $('#mesto5 input:eq(2)').attr('required','required');
+             $('#mesto5 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom5').css('display','inline-block'); 
@@ -1033,6 +1073,10 @@ function perekF5(){
              $('.touch5').css('margin', '2px');
              $('.obtext5').css('color','#000');
              $('.gabtext5').css('color','#B3B3B3');
+             $('#mesto5 input:eq(0)').attr('required','required');
+             $('#mesto5 input:eq(1)').removeAttr('required');
+             $('#mesto5 input:eq(2)').removeAttr('required');
+             $('#mesto5 input:eq(3)').removeAttr('required');
           }
      }
 // 6 место
@@ -1043,6 +1087,10 @@ function perekF6(){
              $('.gabtext6').css('color','#000');
              $('.obyom6').css('display','none');
              $('.gabar6').css('display','inline-block'); 
+             $('#mesto6 input:eq(0)').removeAttr('required')
+             $('#mesto6 input:eq(1)').attr('required','required');
+             $('#mesto6 input:eq(2)').attr('required','required');
+             $('#mesto6 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom6').css('display','inline-block'); 
@@ -1050,6 +1098,10 @@ function perekF6(){
              $('.touch6').css('margin', '2px');
              $('.obtext6').css('color','#000');
              $('.gabtext6').css('color','#B3B3B3');
+             $('#mesto6 input:eq(0)').attr('required','required');
+             $('#mesto6 input:eq(1)').removeAttr('required');
+             $('#mesto6 input:eq(2)').removeAttr('required');
+             $('#mesto6 input:eq(3)').removeAttr('required');
           }
      }
 // 7 место
@@ -1060,6 +1112,10 @@ function perekF7(){
              $('.gabtext7').css('color','#000');
              $('.obyom7').css('display','none');
              $('.gabar7').css('display','inline-block'); 
+             $('#mesto7 input:eq(0)').removeAttr('required')
+             $('#mesto7 input:eq(1)').attr('required','required');
+             $('#mesto7 input:eq(2)').attr('required','required');
+             $('#mesto7 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom7').css('display','inline-block'); 
@@ -1067,6 +1123,10 @@ function perekF7(){
              $('.touch7').css('margin', '2px');
              $('.obtext7').css('color','#000');
              $('.gabtext7').css('color','#B3B3B3');
+             $('#mesto7 input:eq(0)').attr('required','required');
+             $('#mesto7 input:eq(1)').removeAttr('required');
+             $('#mesto7 input:eq(2)').removeAttr('required');
+             $('#mesto7 input:eq(3)').removeAttr('required');
           }
      }
 // 8 место
@@ -1077,7 +1137,10 @@ function perekF8(){
              $('.gabtext8').css('color','#000');
              $('.obyom8').css('display','none');
              $('.gabar8').css('display','inline-block'); 
-             console.log("8 переключатель")
+             $('#mesto8 input:eq(0)').removeAttr('required')
+             $('#mesto8 input:eq(1)').attr('required','required');
+             $('#mesto8 input:eq(2)').attr('required','required');
+             $('#mesto8 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom8').css('display','inline-block'); 
@@ -1085,7 +1148,10 @@ function perekF8(){
              $('.touch8').css('margin', '2px');
              $('.obtext8').css('color','#000');
              $('.gabtext8').css('color','#B3B3B3');
-             console.log("8 переключатель элесе")
+             $('#mesto8 input:eq(0)').attr('required','required');
+             $('#mesto8 input:eq(1)').removeAttr('required');
+             $('#mesto8 input:eq(2)').removeAttr('required');
+             $('#mesto8 input:eq(3)').removeAttr('required');
           }
      }
 // 9 место
@@ -1096,6 +1162,10 @@ function perekF9(){
              $('.gabtext9').css('color','#000');
              $('.obyom9').css('display','none');
              $('.gabar9').css('display','inline-block'); 
+             $('#mesto9 input:eq(0)').removeAttr('required')
+             $('#mesto9 input:eq(1)').attr('required','required');
+             $('#mesto9 input:eq(2)').attr('required','required');
+             $('#mesto9 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom9').css('display','inline-block'); 
@@ -1103,6 +1173,10 @@ function perekF9(){
              $('.touch9').css('margin', '2px');
              $('.obtext9').css('color','#000');
              $('.gabtext9').css('color','#B3B3B3');
+             $('#mesto9 input:eq(0)').attr('required','required');
+             $('#mesto9 input:eq(1)').removeAttr('required');
+             $('#mesto9 input:eq(2)').removeAttr('required');
+             $('#mesto9 input:eq(3)').removeAttr('required');
           }
      }
 // 10 место
@@ -1113,6 +1187,10 @@ function perekF10(){
              $('.gabtext10').css('color','#000');
              $('.obyom10').css('display','none');
              $('.gabar10').css('display','inline-block'); 
+             $('#mesto10 input:eq(0)').removeAttr('required')
+             $('#mesto10 input:eq(1)').attr('required','required');
+             $('#mesto10 input:eq(2)').attr('required','required');
+             $('#mesto10 input:eq(3)').attr('required','required');
               } 
           else{
              $('.obyom10').css('display','inline-block'); 
@@ -1120,6 +1198,10 @@ function perekF10(){
              $('.touch10').css('margin', '2px');
              $('.obtext10').css('color','#000');
              $('.gabtext10').css('color','#B3B3B3');
+             $('#mesto10 input:eq(0)').attr('required','required');
+             $('#mesto10 input:eq(1)').removeAttr('required');
+             $('#mesto10 input:eq(2)').removeAttr('required');
+             $('#mesto10 input:eq(3)').removeAttr('required');
           }
      }
 
