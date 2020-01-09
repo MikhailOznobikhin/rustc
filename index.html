@@ -1,0 +1,2306 @@
+<!doctype html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <title>Главная</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+  <link rel="preload" href="js/main.bundle.b0cd.js" as="script" />
+  <link rel="preload" href="css/app.f636.css" as="style" />
+  <link rel="preload" href="fonts/segoeui/segoe_ultralight.fe64.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_ultralight-italic.c2e2.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_light.03ad.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_light-italic.7cd7.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_normal-italic.2aca.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_semibold-italic.2ab2.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_normal.a66a.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_semibold.87bd.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_bold.db5a.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/segoeui/segoe_bold-italic.8f46.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.f636.css" />
+  <script  src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+ 
+
+</head>
+
+<body>
+  <div id="app" class="grid main-page">
+    <header class="header">
+      <div class="header__container">
+        <figure class="logo">
+          <a href="/" title="Транспортная компания РТС" class="logo__link">
+            <img src="#" srcset="img/components/logo/logo.png 1x, img/components/logo/logo@2x.png 2x" width="165"
+              height="100" alt="Логотип Транспортной компании РТС" class="logo__img" />
+          </a>
+        </figure>
+        <div class="header__main-contacts">
+          <button onclick="open_modal()" class="btn header__order-btn">
+            <span>ОФОРМИТЬ ЗАЯВКУ</span>
+          </button>
+          <a href="tel:88001004979" class="header__phone-btn">
+            <span class="header__phone-btn-text">8-800-100-4979</span>
+            <svg width="20" height="20" class="header__phone-btn-icon">
+              <use xlink:href="img/sprite-icons.svg#phone"></use>
+            </svg>
+          </a>
+          
+          
+          <!-- Окрытие меню с телефона -->   
+          <button aria-label="Меню" id="open_md_sm" class="header__menu-btn" onClick='vyp_uslugi()'>
+            <svg width="28" height="28">
+              <use xlink:href="img/sprite-icons.svg#menu"></use>
+            </svg>
+          </button>
+
+          <!-- Закрытие меню -->
+          <button aria-label="Меню" id="close_md_sm" class="header__menu-btn none_block" onClick='hide_uslugi()'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><style>.a,.b{fill:#fff;}.a{opacity:0;}</style></defs><rect class="a" width="28" height="28"></rect><path class="b" d="M21.941,18.9,14,10.958,6.059,18.9A1.384,1.384,0,0,1,4.1,16.942L12.042,9,4.1,1.058A1.384,1.384,0,0,1,6.059-.9L14,7.042,21.941-.9A1.384,1.384,0,0,1,23.9,1.058L15.958,9,23.9,16.942A1.384,1.384,0,0,1,21.941,18.9Z" transform="translate(0 5)"></path></svg>
+          </button>
+        </div>
+
+<!-- Меню для телефонов -->
+<div class="menu_sm menu_sm_marg none_block" style="top: 0px;">
+
+  <ul style="list-style: none; font-size: 16px;">
+    <li class="nav__item">
+      <a href="index.html" class="nav__link">Главная</a>
+    </li>
+    <li class="nav__item drop" onclick="open_sm_us()">
+      <a class="nav__link">Услуги и цены </a> 
+      <svg id="menu_sm_treug" class="treug sm_menu_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+      </svg>
+    </li>
+    <ul class="sub_sm none_block">
+      <li class="nav__submenu-item">
+        <a href="uslugi/perevozka-sbornykh-gruzov.html" class="nav__submenu-link small_pad">Перевозка сборных грузов</a> </li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/khraneniye-gruzov-na-sklade.html" class="nav__submenu-link small_pad">Хранение груза на складе</a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/perevozka-khrupkogo-gruza.html" class="nav__submenu-link small_pad">Перевозка хрупкого груза </a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/avtoekspedirovaniye.html" class="nav__submenu-link small_pad">Автоэкспедирование</a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/perevozka-v-teple.html" class="nav__submenu-link small_pad">Перевозка в тепле</a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/pogruzochno-razgruzochnyye-uslugi.html" class="nav__submenu-link small_pad">Погрузочно-разгрузочные услуги</a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/upakovka.html" class="nav__submenu-link small_pad">Упаковка</a></li>
+      <li class="nav__submenu-item">
+        <a href="uslugi/perevozka-po-nakladnym.html" class="nav__submenu-link small_pad">Перевозка по накладным</a></li>
+    </ul>
+
+    <li class="nav__item">
+      <a href="documents.html" class="nav__link">Документы</a>
+    </li>
+    <li class="nav__item">
+      <a href="about.html" class="nav__link">О компании</a>
+    </li>
+    <li class="nav__item">
+      <a href="contacts.html" class="nav__link">Контакты и филиалы</a>
+    </li>
+  </ul>
+
+  <div class="goroda">
+    <hr class="hr_white">
+<div onclick="open_info_spb()" class="gorod spb_sm"><p>Санкт-Петербург<svg id="spb_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+</svg></p>
+          <div class="info_gor none_block">
+                <div class="header__contacts-phones">
+                  <a href="tel:88129224342" class="header__contacts-phone">&nbsp; +7 (812) 922-43-42</a>
+                  <br />
+                  <a href="tel:88129225432" class="header__contacts-phone">&nbsp; +7 (812) 922-54-32</a>
+                </div>
+                <div class="header__contacts-street addres_sm">&nbsp; ул. Калинина, 57</div>
+                <div class="header__contacts-hours" style="width: 100%;">
+                  &nbsp; Пн - Пт (9:00 - 19:00)
+                  <br />&nbsp; Сб (9:00 - 14:00)
+                </div>
+          </div>
+</div>
+    <hr class="hr_white">
+
+<div onclick="open_info_msk()" class="gorod msk_sm"><p>Москва  <svg id="msk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+</svg></p>
+        <div class="info_gor none_block">
+          <div class="header__contacts-phones">
+            <a href="+74993439471" class="header__contacts-phone">&nbsp; +7 (499) 343-94-71</a>
+          </div>
+          <div class="header__contacts-street addres_sm">&nbsp; Ярославское шоссе, Северянинский проезд, влад 3.</div>
+          <div class="header__contacts-hours" style="width: 100%;">
+            &nbsp; Пн - Пт (9:00 - 18:00)
+            <br />&nbsp; Сб - Вс (Выходной)
+          </div>
+    </div>
+</div>
+    <hr class="hr_white">
+    
+
+    
+    <div onclick="open_info_nsk()" class="gorod nsk_sm"><p>Новосибирск<svg id="nsk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+    </svg>
+
+    </p>
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+79835106887" class="header__contacts-phone">&nbsp; +7 (983) 510-68-87</a></div>
+        <div class="header__contacts-street addres_sm">&nbsp; ул. Писарева д.121, склад 14</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          &nbsp; Пн - Пт (9:00 - 18:00)
+          <br />&nbsp; Сб - Вс (Выходной)
+        </div>
+  </div>
+    
+   
+    </div>
+    <hr class="hr_white">
+    <div onclick="open_info_krs()" class="gorod krs_sm"><p>Красноярск
+      <svg id="krs_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+      </svg>
+    </p>
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+79835081202" class="header__contacts-phone">&nbsp;+7 (983) 508-12-02</a></div>
+        <div class="header__contacts-street addres_sm">&nbsp;Северное шоссе, 11</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          &nbsp;Пн - Пт (9:00 - 18:00)
+          <br />&nbsp;Сб - Вс (Выходной)
+        </div>
+  </div>
+</div>
+    <hr class="hr_white">
+  
+    <div onclick="open_info_irk()" class="gorod irk_sm"><p>Иркутск
+      <svg id="irk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+      </svg>
+    </p>
+
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones">
+          <a href="tel:+78001004879" class="header__contacts-phone">&nbsp; +7 (800) 100-49-79</a><br>
+          <a href="tel:+79086632030" class="header__contacts-phone">&nbsp; +7 (908) 663-20-30</a>
+        </div>
+        <div class="header__contacts-street addres_sm"><p>&nbsp; ул. Касьянова д.26, оф.2,3,4</p></div>
+        <div class="header__contacts-street addres_sm"><p>&nbsp; ул. Иркутная 2 стр.17</p></div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          &nbsp;Пн - Пт (9:00 - 18:00)
+          <br />&nbsp;Сб - Вс (Выходной)
+        </div>
+  </div>
+    </div>
+    <hr class="hr_white">
+    <div onclick="open_info_udu()" class="gorod udu_sm"><p>Улан-Удэ
+      <svg id="udu_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+      </svg>
+    </p>
+    
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+73012204117" class="header__contacts-phone">&nbsp;+7 (3012) 204-117</a></div>
+        <div class="header__contacts-street addres_sm">&nbsp;ул. Комарова, 122</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          &nbsp; Пн - Пт (9:00 - 18:00)
+          <br />&nbsp;Сб - Вс (Выходной)
+        </div>
+  </div>
+</div>
+    <hr class="hr_white">
+
+  </div>
+
+</div>
+
+<!-- Здесь были скрипты 1 -->
+
+
+
+        <div class="header__contacts">
+          <ul class="header__branches js-tabs" style="border-bottom: 1px solid #FFF;">
+            <li class="header__branches-item">
+              <button data-tabs-target="#city1" class="header__branches-btn">Санкт-Петербург</button>
+            </li>
+            <li class="header__branches-item">
+              <button data-tabs-target="#city2" class="header__branches-btn">Москва</button>
+            </li>
+            <li class="header__branches-item">
+              <button data-tabs-target="#city3" class="header__branches-btn">Новосибирск</button>
+            </li>
+            <li class="header__branches-item">
+              <button data-tabs-target="#city4" class="header__branches-btn">Красноярск</button>
+            </li>
+            <li class="header__branches-item is-active">
+              <button data-tabs-target="#city5" class="header__branches-btn">Иркутск</button>
+            </li>
+            <li class="header__branches-item">
+              <button data-tabs-target="#city6" class="header__branches-btn">Улан-Удэ</button>
+            </li>
+          </ul>
+          <ul class="header__contacts-list">
+            <li id="city1" class="header__contacts-item">
+              <div class="header__contacts-street">ул. Калинина, 57</div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 19:00)
+                <br />Сб (9:00 - 14:00)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="tel:88129224342" class="header__contacts-phone">+7 (812) 922-43-42</a>
+                <br />
+                <a href="tel:88129225432" class="header__contacts-phone">+7 (812) 922-54-32</a>
+              </div>
+            </li>
+
+            <li id="city2" class="header__contacts-item">
+              <div class="header__contacts-street">Ярославское шоссе, Северянинский проезд, влад 3.</div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 18:00)
+                <br />Сб - Вс (Выходной)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="+74993439471" class="header__contacts-phone">+7 (499) 343-94-71</a>
+              </div>
+            </li>
+
+            <li id="city3" class="header__contacts-item">
+              <div class="header__contacts-street">ул. Писарева д.121, склад 14</div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 18:00)
+                <br />Сб - Вс (Выходной)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="tel:+79835106887" class="header__contacts-phone">+7 (983) 510-68-87</a>
+              </div>
+            </li>
+
+            <li id="city4" class="header__contacts-item">
+              <div class="header__contacts-street">Северное шоссе, 11</div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 18:00)
+                <br />Сб - Вс (Выходной)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="tel:+79835081202" class="header__contacts-phone">+7 (983) 508-12-02</a>
+              </div>
+            </li>
+
+            <li id="city5" class="header__contacts-item is-active">
+              <div class="header__contacts-street">
+                <p>ул. Касьянова д.26, оф.2,3,4</p>
+                <p class="header__contacts-street" style="margin: 0 0 0 -20px; width: auto;">ул. Иркутная 2 стр.17</p>
+              </div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 18:00)
+                <br />Сб - Вс (Выходной)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="tel:+78001004879" class="header__contacts-phone">+7 (800) 100-49-79</a><br>
+                <a href="tel:+79086632030" class="header__contacts-phone">+7 (908) 663-20-30</a>
+              </div>
+            </li>
+
+            <li id="city6" class="header__contacts-item">
+              <div class="header__contacts-street">ул. Комарова, 122</div>
+              <div class="header__contacts-hours">
+                Пн - Пт (9:00 - 18:00)
+                <br />Сб - Вс (Выходной)
+              </div>
+              <div class="header__contacts-phones">
+                <a href="tel:+73012204117" class="header__contacts-phone">+7 (3012) 204-117</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="nav js-nav header__nav">
+        <div class="container">
+          <ul class="nav__list">
+            <li class="nav__item is-active">
+              <a href="index.html" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item nav__item--drop">
+              <a href="services.html" class="nav__link">Услуги и цены</a>
+              <div class="nav__submenu-box" style="z-index: 9;">
+                <div class="nav__submenu-container">
+                  <ul class="nav__submenu-list">
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/perevozka-sbornykh-gruzov.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu1" />
+                          </svg>
+                        </figure>Перевозка сборных грузов
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item is-active">
+                      <a href="uslugi/khraneniye-gruzov-na-sklade.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu2" />
+                          </svg>
+                        </figure>Хранение груза на складе
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/perevozka-khrupkogo-gruza.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu3" />
+                          </svg>
+                        </figure>Перевозка хрупкого груза
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/avtoekspedirovaniye.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu4" />
+                          </svg>
+                        </figure>Автоэкспедирование
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/perevozka-v-teple.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu5" />
+                          </svg>
+                        </figure>Перевозка в тепле
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/pogruzochno-razgruzochnyye-uslugi.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu6" />
+                          </svg>
+                        </figure>Погрузочно-разгрузочные услуги
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/upakovka.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu7" />
+                          </svg>
+                        </figure>Упаковка
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="uslugi/perevozka-po-nakladnym.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="img/sprite-icons.svg#submenu8" />
+                          </svg>
+                        </figure>Перевозка по накладным
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="nav__submenu-images-list">
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/1.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item is-active">
+                      <img src="#" srcset="img/components/base-nav/2.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/3.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/4.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/5.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/6.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/7.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="img/components/base-nav/8.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="documents.html" class="nav__link">Документы</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">О компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="contacts.html" class="nav__link">Контакты и филиалы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h1 class="sr-only">SEO title</h1>
+
+
+
+    <button data-modal-target="routes" class="btn hero__action-btn btn--size-big" id="how" onclick="vypmodal()">
+      <span>Выберите маршрут</span>
+    </button>
+
+<!-- Модальное окно от карты -->
+<div id='md_cart' class="md_cart" style="transition: opacity 1s; left: 50%;margin-right: -50%;">
+  <div class="modal-routes">
+    <ul class="modal-routes__list js-routes" style="margin: 0; padding: 0px 13px 0px 0px;">
+      <li data-route-point1="msc" id="p1" data-route-point2="nvsbk" data-route-length="3400" data-route-dates="3-4"
+        class="modal-routes__item">Москва - Новосибирск</li>
+      <li data-route-point1="msc" id="p2" data-route-point2="krsnk" data-route-length="4200" data-route-dates="4-5"
+        class="modal-routes__item">Москва - Красноярск</li>
+      <li data-route-point1="msc" id="p3" data-route-point2="irksk" data-route-length="5200" data-route-dates="6-7"
+        class="modal-routes__item">Москва - Иркутск</li>
+      <li data-route-point1="msc" id="p4" data-route-point2="ulud" data-route-length="5660" data-route-dates="8-9"
+        class="modal-routes__item">Москва - Улан-Удэ</li>
+      <li data-route-point1="spb" id="p5" data-route-point2="nvsbk" data-route-length="3820" data-route-dates="5-6"
+        class="modal-routes__item">Санкт-Петербург - Новосибирск</li>
+      <li data-route-point1="spb" id="p6" data-route-point2="krsnk" data-route-length="4600" data-route-dates="8-9"
+        class="modal-routes__item">Санкт-Петербург - Красноярск</li>
+      <li data-route-point1="spb" id="p7" data-route-point2="irksk" data-route-length="5650" data-route-dates="9-10"
+        class="modal-routes__item">Санкт-Петербург - Иркутск</li>
+      <li data-route-point1="spb" id="p8" data-route-point2="ulud" data-route-length="6080" data-route-dates="11-12"
+        class="modal-routes__item">Санкт-Петербург - Улан-Удэ</li>
+      <li data-route-point1="nvsbk" id="p9" data-route-point2="irksk" data-route-length="1850" data-route-dates="3-4"
+        class="modal-routes__item">Новосибирск - Иркутск</li>
+      <li data-route-point1="nvsbk" id="p10" data-route-point2="ulud" data-route-length="2280" data-route-dates="4-5"
+        class="modal-routes__item">Новосибирск - Улан-Удэ</li>
+        <li data-route-point1="krsnk" id="p11" data-route-point2="irksk" data-route-length="1060" data-route-dates="4-5"
+        class="modal-routes__item">Красноярск - Иркутск</li>
+      <li data-route-point1="irksk" id="p12" data-route-point2="ulud" data-route-length="460" data-route-dates="1-2"
+        class="modal-routes__item">Иркутск - Улан-Удэ</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- СКРИПТЫ 2 -->
+
+
+
+
+
+<!-- Бегущая строка -->
+        <div class="hero__marquee">
+          <div class="container">
+            <div class="marquee">
+              <div class="marquee__box">
+                <ul class="marquee__list">
+                  <li class="marquee__item">Количество доставленных грузов за сегодня:<span class="gruz">345 </span> штук</li>
+                  <li class="marquee__item">Общий вес перевезённый за сегодня:<span class="ves">70 </span> тонн</li>
+                  <li class="marquee__item">Преодоленное расстояние за сегодня:<span class="ras">15000 </span> км.</li>
+                  <li class="marquee__item">Количество доставленных грузов за сегодня:<span class="gruz">345 </span>  штук</li>
+                  <li class="marquee__item">Общий вес перевезённый за сегодня:<span class="ves">70 </span> тонн</li>
+                  <li class="marquee__item">Преодоленное расстояние за сегодня:<span class="ras">15000 </span> км.</li>
+                  <li class="marquee__item">Количество доставленных грузов за сегодня:<span class="gruz">345 </span>  штук</li>
+                  <li class="marquee__item">Общий вес перевезённый за сегодня:<span class="ves">70 </span> тонн</li>
+                  <li class="marquee__item">Преодоленное расстояние за сегодня:<span class="ras">15000 </span> км.</li>
+                  <li class="marquee__item">Количество доставленных грузов за сегодня:<span class="gruz">345 </span>  штук</li>
+                  <li class="marquee__item">Общий вес перевезённый за сегодня:<span class="ves">70 </span> тонн</li>
+                  <li class="marquee__item">Преодоленное расстояние за сегодня:<span class="ras">15000 </span> км.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- СКРИПТЫ 3 -->
+
+        <div class="hero__map-box">
+          <figure class="visual-map">
+            <picture>
+              <source srcset="img/components/hero/map.webp 1x, img/components/hero/map@2x.webp 2x" type="image/webp" />
+              <img src="#" srcset="img/components/hero/map.png 1x, img/components/hero/map@2x.png 2x" alt
+                class="visual-map__map-img" />
+            </picture>
+         
+              <div data-map-city="msc" class="visual-map__points-item visual-map__points-item--msc">
+                <div class="visual-map__points-name">Москва</div>
+                  <div class="msk fix">  <div class="dmsk">
+                      <p><b>Москва</b></p> 
+                      <p><a href="tel:+74993439471" class="footer__tel-link">+7 (499) 343-94-71</a></p>                    
+                      <p class="adres_img"><span class="adres_span">Ярославское шоссе, Северянинский проезд, влад 3.</span></p>
+                      </div>
+                  </div>
+              </div>
+             
+
+            <div data-map-city="spb" class="visual-map__points-item visual-map__points-item--spb">
+              <div class="visual-map__points-name">Санкт-Петербург</div>
+              <div class="spb fix">
+                  <div class="dspb">
+                    <p><b>Санкт-Петербург</b></p>
+                    <p><a href="tel:88129224342" class="footer__tel-link">+7 (812) 922-43-42</a></p>
+                    <p><a href="tel:88129225432" class="footer__tel-link">+7 (812) 922-54-32</a></p>
+                    
+                    <p class="adres_img"><span class="adres_span">ул. Калинина 57</span></p>
+                  </div>
+              </div>
+            </div>
+
+            <div data-map-city="nvsbk" class="visual-map__points-item visual-map__points-item--nvsbk">
+              <div class="visual-map__points-name">Новосибирск</div>
+              <div class="nsk fix">
+                <div class="dnsk">
+                  <p><b>Новосибирск</b></p>
+                    <p><a href="tel:+79835106887" class="footer__tel-link">+7 (983) 510-68-87</a></p>   
+                    
+                    <p class="adres_img"><span class="adres_span">ул. Писарева д.121, склад 14</span></p>
+                  </div>
+              </div>
+            </div>
+
+            <div data-map-city="krsnk" class="visual-map__points-item visual-map__points-item--krsnk">
+              <div class="visual-map__points-name">Красноярск</div>
+              <div class="krs fix">
+              <div class="dkrs">
+                <p><b>Красноярск</b></p>
+                  <p><a href="tel:+79835081202" class="footer__tel-link">+7 (983) 508-12-02</a></p>
+                <p class="adres_img"><span class="adres_span">Северное шоссе, 11</span></p>
+                </div>
+              </div>
+            </div>
+
+
+            <div data-map-city="irksk" class="visual-map__points-item visual-map__points-item--irksk">
+              <div class="visual-map__points-name">Иркутск</div>
+              <div class="irk fix">
+                <div class="dirk">
+                  <p><b>Иркутск</b></p>
+                  <p><a href="tel:+78001004879" class="footer__tel-link">+7 (800) 100-49-79</a></p>
+                  <p><a href="tel:+79086632030" class="footer__tel-link">+7 (908) 663-20-30</a></p>
+                  <p class="adres_img"><span class="adres_span">ул. Касьянова д.26, оф.2,3,4</span></p>
+                  <p class="adres_img"><span class="adres_span">ул. Иркутная 2 стр. 17</span></p>
+                  </div>
+              </div>
+            </div>
+
+            <div data-map-city="ulud" class="visual-map__points-item visual-map__points-item--ulud" style="margin-left: 1.3%;">
+              <div class="visual-map__points-name">Улан-Удэ</div>
+              <div class="ulud fix">
+                <div class="dude">
+                  <p><b>Улан-Удэ</b></p>
+                    <p><a href="tel:+73012204117" class="footer__tel-link">+7 (3012) 204-117</a></p>
+                    <p class="adres_img" style="margin-left:12%;"><span class="adres_span">ул. Комарова, 122</span></p>
+                  </div>
+              </div>
+            </div>
+            <div class="visual-map__connect">
+              <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                class="visual-map__connect-svg">
+                <path d="M0 0" />
+              </svg>
+            </div>
+          </figure>
+        </div>
+        <figure class="hero__bg-box">
+          <picture>
+            <source srcset="img/components/hero/big/bg.jpg 1x, img/components/hero/big/bg@2x.jpg 2x" />
+            <img src="#" srcset="img/components/hero/bg.jpg 1x, img/components/hero/bg@2x.jpg 2x" alt
+              class="hero__bg" />
+          </picture>
+        </figure>
+      </section>
+      <div class="static-form">
+
+<!-- Калькулятор -->
+        <div class="container">
+          <div class="form42">
+            <section class="form42__main">
+              <div class="form42__title" id="calculator">Укажите детали доставки</div>
+              <div class="form42__title2">Маршрут и данные о грузе</div>
+              <div class="form42__line">
+                <div class="form42__row">
+                  <label class="form42__point1">
+                    <span class="form42__label">
+                      Откуда
+                      <mark>*</mark>
+                    </span>
+                    <select id="otkuda">
+                      <option value="placeholder">Откуда</option>
+                      <option value="1">Москва</option>
+                      <option value="2">Санкт-Петербург</option>
+                      <option value="3">Новосибирск</option>
+                      <option value="4">Красноярск</option>
+                      <option value="5">Иркутск</option>
+ 
+                    </select>
+                    <svg class="treug" style="z-index:6;" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                    </svg>
+                 
+                  </label>
+                </div>
+                <div class="form42__row">
+                  <label class="form42__point2">
+                    <span class="form42__label">
+                      Куда
+                      <mark>*</mark>
+                    </span>
+                    <select id="kuda">
+                      <option value="placeholder">Куда</option>
+                      <option value="3">Новосибирск</option>
+                      <option value="4">Красноярск</option>
+                      <option value="5">Иркутск</option>
+                      <div id="k6"><option value="6">Улан-Удэ</option></div>
+                    </select>
+                    <svg class="treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="form42__line form42__line--special">
+                <label class="form42__row form42__row--half" style="margin-right: 4.5%;">
+                  <span class="form42__label">
+                    Объем
+                    <mark>*</mark>
+                  </span>
+                  <input type="number" min="0" id="obyom" placeholder="м3" class="text-center" />
+                </label>
+                <label class="form42__row form42__row--half" style="margin-right: auto; ">
+                  <span class="form42__label">
+                    Вес
+                    <mark>*</mark>
+                  </span>
+                  <input type="number" min="0" id="massa" placeholder="кг" class="text-center" />
+                </label>
+              </div>
+            </section>
+
+            <section class="form42__result">
+              <div class="form42__title2">Расчёт</div>
+              <a href="#" data-disabled="true" class="form42__print-btn">
+                <svg width="16" height="16" class="form42__print-icon">
+                  <use xlink:href="img/sprite-icons.svg#print" />
+                </svg>
+
+              </a>
+              <div class="form42__result-price">
+                <span id="rez">0</span>
+                руб.
+              </div>
+              <div class="form42__result-price-info">ориентировочная стоимость доставки</div>
+
+              
+              <div class="form42__result-bottom">
+                  <button onclick="open_modal()" class="btn header__order-btn">
+                      <span>ОФОРМИТЬ ЗАЯВКУ</span>
+                    </button>
+              </div>
+            </section>
+          </div>
+        </div>
+
+<!-- СКРИПТЫ 4 -->
+        
+        <figure role="presentation" class="skew-decoration skew-decoration--top"></figure>
+        <figure role="presentation" class="skew-decoration skew-decoration--bottom"></figure>
+        <figure role="presentation" class="truck-decoration js-truck-decoration">
+          <div class="truck-decoration__truck">
+            <img src="#"
+              srcset="img/components/truck-decoration/truck.png 1x, img/components/truck-decoration/truck@2x.png 2x" alt
+              width="304" height="81" class="truck-decoration__truck-img" />
+          </div>
+        </figure>
+      </div>
+
+      <section class="steps">
+        <div class="steps__container">
+          <h2 class="title">
+            <span class="title__inner">Этапы доставки грузов</span>
+          </h2>
+          <ol class="steps__list">
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/1.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Рассчитайте стоимость перевозки</div>
+              <div class="steps__tip">
+                Для этого можно использовать удобный калькулятор, расположенный выше на странице. Однако, стоит учесть, что стоимость ориентировочная, поскольку могут потребоваться дополнительные услуги.
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/2.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Оформите заявку на сайте</div>
+              <div class="steps__tip">
+                Оформить заявку можно в калькуляторе. В открывшемся окне есть возможность выбрать дополнительные услуги и узнать информацию о них. После этого с вами свяжется оператор для уточнения деталей.
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/3.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Подготовьте груз к &nbsp перевозке</div>
+              <div class="steps__tip">
+                При подготовке груза к перевозке, учтите требования к упаковке и составу. Подробнее об этом можно узнать <a href="http://rustc.tw1.ru/uslugi/upakovka.html">здесь.</a>
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/4.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">
+                Наш водитель заберёт ваш груз или доставьте его
+                самостоятельно
+              </div>
+              <div class="steps__tip">
+                Если вы не можете самостоятельно доставить груз до терминала компании РТС, воспользуйтесь услугой <a href="http://rustc.tw1.ru/uslugi/avtoekspedirovaniye.html">&quot;Автоэкспедирование&quot;</a>. Для этого при оформлении заявки поставьте галочку &quot;Автоэкспедирование груза от адреса&quot;.
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/5.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Вы оплачиваете счёт за перевозку</div>
+              <div class="steps__tip">
+                После доставки груза в терминал транспортной компании РТС вы получите счет, который нужно оплатить.
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/6.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Вы получаете почтовое уведомление о прибытии груза</div>
+              <div class="steps__tip">
+                Вы получите уведомление, когда груз прибудет в конечный пункт. После этого у получателя будет 2 рабочих дня, чтобы забрать его. Если требуется более длительное хранение, воспользуйтесь услугой <a href="http://rustc.tw1.ru/uslugi/khraneniye-gruzov-na-sklade.html">&quot;Хранение груза на складе&quot;</a>.
+              </div>
+            </li>
+            <li class="steps__item">
+              <figure class="steps__icon-box">
+                <img src="img/components/steps/7.svg" alt class="steps__icon icona" />
+              </figure>
+              <div class="steps__caption">Мы доставим груз до получателя или выдадим груз в пункте выдачи</div>
+              <div class="steps__tip">
+                Если получатель не может самостоятельно забрать груз из терминала компании РТС, воспользуйтесь услугой <a href="http://rustc.tw1.ru/uslugi/avtoekspedirovaniye.html">&quot;Автоэкспедирование&quot;</a>. Для этого при оформлении заявки поставьте галочку &quot;Автоэкспедирование груза до адреса&quot;.
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="steps__route-box1">
+          <figure class="steps__route-box2">
+            <img src="#" srcset="img/components/steps/route.png 1x, img/components/steps/route@2x.png 2x" alt
+              class="steps__route-img" />
+          </figure>
+        </div>
+        <figure role="presentation" class="skew-decoration"></figure>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__container">
+          <h2 class="title">
+            <span class="title__inner">Наши преимущества</span>
+          </h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/1.png 1x, img/components/advantages/250x250/1@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/1.png 1x, img/components/advantages/1@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Применение современного автомобильного парка</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/2.png 1x, img/components/advantages/250x250/2@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/2.png 1x, img/components/advantages/2@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Предоставление широкого ассортимента дополнительных услуг</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/3.png 1x, img/components/advantages/250x250/3@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/3.png 1x, img/components/advantages/3@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Полный комплекс транспортно-экспедиционных услуг</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/4.png 1x, img/components/advantages/250x250/4@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/4.png 1x, img/components/advantages/4@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Наличие просторных складов во всех филиалах компании</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/5.png 1x, img/components/advantages/250x250/5@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/5.png 1x, img/components/advantages/5@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Качественная упаковка и ответственная погрузка всех видов грузов</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/6.png 1x, img/components/advantages/250x250/6@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/6.png 1x, img/components/advantages/6@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">
+                Онлайн сервисы на сайте компании (расчет стоимости доставки; оформление
+                заявки на перевозку груза)
+              </div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/7.png 1x, img/components/advantages/250x250/7@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/7.png 1x, img/components/advantages/7@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Полная материальная ответственность компании “РТС”</div>
+            </li>
+            <li class="advantages__item">
+              <figure class="advantages__img-box">
+                <picture>
+                  <source
+                    srcset="img/components/advantages/250x250/8.png 1x, img/components/advantages/250x250/8@2x.png 2x"
+                    media="(min-width: 992px)" />
+                  <img src="#" srcset="img/components/advantages/8.png 1x, img/components/advantages/8@2x.png 2x" alt />
+                </picture>
+              </figure>
+              <div class="advantages__caption">Обслуживание клиента персональным менеджером компании “РТС”</div>
+            </li>
+          </ul>
+          <figure class="advantages__store-box">
+            <img src="#" srcset="img/components/advantages/store.png 1x, img/components/advantages/store@2x.png 2x" alt
+              class="advantages__store" />
+          </figure>
+        </div>
+        <figure role="presentation" class="skew-decoration skew-decoration--white"></figure>
+      </section>
+
+      <article class="about">
+        <div class="about__container">
+          <h2 class="title">
+            <span class="title__inner">О компании</span>
+          </h2>
+           <div class="toggle-text">
+            <div id="aboutCollapse" class="toggle-text__box about__box">
+              <div class="about__text">
+                <p>
+Транспортная компания “РТС”, занимающая лидирующие позиции на рынке организации перевозки грузов, предлагает полный комплекс транспортных, складских и экспедиционных услуг: перевозка сборных грузов автомобильным транспортом, перевозка негабаритных грузов, доставка груза по схеме “от двери до двери”, упаковка груза, хранение груза, автоэкспедирование груза.</p>
+<p>
+Квалифицированные сотрудники нашей компании грузоперевозок, обладающие огромным опытом практической деятельности, в кратчайшие сроки осуществят доставку любых грузов в необходимый пункт назначения. Безупречный сервис, индивидуальный подход и безусловное исполнение всех взятых на себя обязательств - основные критерии, которыми характеризуется наша транспортная компания.</p>
+<p>
+Иркутск, Красноярск, Новосибирск, Улан-Удэ, Санкт-Петербург и Москва порадуют вас просторными складами и погрузочными площадками, оснащенными современным высокотехнологичным оборудованием. В данных городах расположены филиалы компании, а надежные и проверенные временем партнеры представлены во всех регионах.</p>
+<p>
+Транспортная компания “РТС” характеризуется целым рядом очевидных конкурентных преимуществ:</p>
+ 
+<ul>
+<li>Предоставление полного комплекса транспортно-экспедиционных услуг.</li>
+<li>Использование современного автомобильного парка.</li>
+<li>Наличие просторных складов во всех филиалах компании.</li>
+<li>Качественная упаковка и ответственная погрузка всех видов грузов.</li>
+<li>Полная материальная ответственность компании “РТС”.</li>
+<li>Предоставление широкого ассортимента дополнительных услуг.</li>
+<li>Доступные тарифы и гибкая система скидок.</li>
+<li>On-line сервисы на сайте компании (калькулятор, производящий расчет стоимости доставки; оформление заявки на перевозку груза и т.д.).</li>
+<li>Обслуживание клиента персональным менеджером компании “РТС”.</li>
+ </ul>
+<p>
+Более подробную информацию, касающуюся организации перевозки грузов, вы можете получить по телефонам у специалистов компании либо у On-line консультанта на сайте грузоперевозчика “РТС”.</p>
+
+ 
+<p>
+Транспортная компания “РТС” - быстрая и надежная доставка грузов в Иркутск и прочие регионы России!
+                </p>
+              </div>
+              <figure class="about__img-box">
+                <img src="img/components/about/about.png" alt width="290" height="290" class="about__img" />
+              </figure>
+            </div>
+            <button aria-label="Свернуть/Развернуть блок" data-slide-target="#aboutCollapse"
+              class="toggle-text__btn js-slide">
+              <svg width="16" height="16" class="toggle-text__btn-icon">
+                <use xlink:href="img/sprite-icons.svg#toggle-arrow" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__container">
+          <section class="footer__main">
+            <h5 class="sr-only">Контакты</h5>
+            <div class="footer__main-header">
+              <figure class="logo">
+                <a href="/" title="Транспортная компания РТС" class="logo__link">
+                  <img src="#" srcset="img/components/logo/logo_small.png 1x, img/components/logo/logo_small@2x.png 2x"
+                    width="96" height="53" alt="Логотип Транспортной компании РТС" class="logo__img" />
+                </a>
+              </figure>
+              <div class="footer__main-contacts">
+                <a href="tel:88001004979" class="footer__tel-link">8-800-100-4979</a>
+                <br />
+                <a href="mailto:info@rustc.biz" class="footer__email-link">info@rustc.biz</a>
+              </div>
+            </div>
+            <div class="footer__addresses">
+              <section class="footer__address">
+                <h6 class="footer__address-title">Санкт-Петербург</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:88129224342" class="footer__tel-link">+7 (812) 922-43-42</a>
+                  </li>
+                  <li class="footer__address-phone">
+                    <a href="tel:88129225432" class="footer__tel-link">+7 (812) 922-54-32</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Калинина 57</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 19:00)
+                  <br />Сб (9:00 - 14:00)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Москва</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+84993439471" class="footer__tel-link">+7 (499) 343-94-71</a>
+                  </li>
+                 
+                </ul>
+                <div class="footer__address-street">
+                    Ярославское шоссе, Северянинский проезд, влад 3.
+                </div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Новосибирск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+79835106887" class="footer__tel-link">+7 (983) 510-68-87</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Писарева д.121, склад 14</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Красноярск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+79835081202" class="footer__tel-link">+7 (983) 508-12-02</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">Северное шоссе, 11</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Иркутск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+78001004879" class="footer__tel-link">+7 (800) 100-49-79</a>
+                  </li>
+                  <li class="footer__address-phone">
+                    <a href="tel:+79086632030" class="footer__tel-link">+7 (908) 663-20-30</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Касьянова д.26, оф.2,3,4</div>
+                <div class="footer__address-street">ул. Иркутная 2 стр. 17 </div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Улан-Удэ</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+73012204117" class="footer__tel-link">+7 (3012) 204-117</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Комарова, 122</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <aside class="footer__nav">
+            <h5 class="sr-only">Навигация по сайту</h5>
+            <ul class="footer__nav-list">
+              <li>
+                <a href="../index.html" class="footer__nav-link">Главная</a>
+              </li>
+              <li>
+                <a href="../services.html" class="footer__nav-link">Услуги и цены</a>
+              </li>
+              <li>
+                <a href="../documents.html" class="footer__nav-link">Документы</a>
+              </li>
+              <li>
+                <a href="../about.html" class="footer__nav-link">О компании</a>
+              </li>
+              <li>
+                <a href="../contacts.html" class="footer__nav-link">Контакты и филиалы</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__copyright">
+              © «РТС» 2019 г. Все права защищены. Информация сайта защищена
+              законом об авторских правах. Сайт не является публичной офертой.
+            </div>
+            <div class="footer__designed">
+              Разработка –
+              <a href target="_blank">TOPSITE STUDIO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="top-btn js-top-btn">
+      <svg width="50" height="80">
+        <use xlink:href="img/sprite-icons.svg#top" />
+      </svg>
+    </button>
+
+    <!-- Модальное окно оформления заявки -->
+    <div tabindex="-1" role="dialog" id="modal_okno" class="modal">
+      <div class="modal__overlay"></div>
+
+      <button title="Закрыть" aria-label="Закрыть" class="modal__close-btn js-modal-close" onclick="close_modal()" style="z-index: 9;">
+        <svg width="30" height="30"><use xlink:href="../img/sprite-icons.svg#close" /></svg>
+      </button>
+
+      <div class="modal__content" style="width: 100%;">
+      
+        
+        <div class="modal-order">
+          <form action="form.php" method="post" class="form42" id="modal_okno_content" style="margin: 0 auto;">
+            <section class="form42__main">
+              <div class="form42__title">Укажите детали доставки</div>
+              <div class="form42__title2">Маршрут и данные о грузе</div>
+              <div class="form42__line">
+                <div class="form42__row">
+                  <label class="form42__point1">
+                    <span class="form42__label">
+                      Откуда
+                      <mark>*</mark>
+
+                        
+                    </span>
+
+                    <input id="otkudIn" name="otkud" >
+                    <select id="otkudamd"  >                
+                      <option value="placeholder">Откуда</option>
+                      <option value="1">Москва</option>
+                      <option value="2">Санкт-Петербург</option>
+                      <option value="3">Новосибирск</option>
+                      <option value="4">Красноярск</option>
+                      <option value="5">Иркутск</option>
+                    </select>
+
+                    <svg class="treug" style="z-index: 7;" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                    </svg>
+                  </label>
+                </div>
+                <div class="form42__row">
+                  <label class="form42__point2">
+                    <span class="form42__label">
+                      Куда
+                      <mark>*</mark>
+                    </span>
+                    <input id="kudIn" name="kud" >
+                    <div id='hide_md'>
+                      <select  id="kudamd">
+                        <option value="placeholder">Куда</option>
+                        <option value="3">Новосибирск</option>
+                        <option value="4">Красноярск</option>
+                        <option value="5">Иркутск</option>
+                        <option value="6">Улан-Удэ</option>
+                      </select>
+                  </div>
+                  
+                  <svg class="treug" style="z-index: 5;" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                  </svg>
+                  </label>
+                </div>
+              </div>
+
+
+                  <!-- Место -->
+                  <div id="mesto_all">
+                  <!-- 1 Место -->
+                  <fieldset class="form42__contacts-set" id="mesto1">
+                                  <legend class="form42__contacts-title">Место 1</legend>
+                                  <!-- <legend class="form42__contacts-title delete" onClick="del1()" id="delete_mesto1">&#10006;</legend> -->
+                                  <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                                      <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                                          <div class="perekl1">
+                                              <div class="touch1"></div>
+                                          </div>
+                                          <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                                          font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                              <span class="obtext1">Ввод по объёму</span><br>
+                                              <span class="gabtext1 none_active_text"> Ввод по габаритам</span>
+                                          </span>
+                                        </label>
+                  
+                                    <label class="obyom1 form42__row form42__row--half" style="width: 139px; ">
+                                      <span class="form42__label">
+                                        Объем
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="number" min="0" name="obom1" placeholder="м3" class="text-center raz" />
+                                      <p class="obsh">Общий объём:<span id="ob1"></span> м<sup>3</sup></p>
+                                    </label>
+
+                                    <label class="gabar1 form42__row form42__row--half" style="width: 139px;display: none;">
+                                      <span class="form42__label">
+                                        Габариты (д, ш, в)
+                                        <mark>*</mark>
+                                        
+                                      </span>
+                                    
+                                      <input type="number" min='0' name="gab1" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                                      <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                                      <input type="number" min='0' name="gab2" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                                      <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                                      <input type="number" min='0' name="gab3" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                                    <p class="obsh">Общий объём:<span id="ob11"></span> м<sup>3</sup></p>
+                                    </label>
+
+                                    <label class="form42__row form42__row--half" style="width: 139px">
+                                      <span class="form42__label">
+                                        Вес
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="number" min="0" name="ves1" placeholder="кг" class="text-center raz" />
+                                      <p class="obsh">Общий вес:<span id="ov1"></span> кг</p>
+                                    </label>
+                                    <div class="form42__row" style="width: 160px">
+                                      <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                                        <span class="form42__label">
+                                          Одинаковые места
+                                          <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+
+                                        </span>
+                                        <div>
+                                          <div class="min-btn" id="min_odin1"><b>-</b></div>
+                                          <input type="number" name="om1" value="1" id="odin_mest1" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                                          <div class="min-btn" id="max_odin1"><b>+</b></div>
+                                      </div>
+                                      </label>
+                                    </div>
+
+                                    <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                                      <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                                        Наименование, характер груза
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="text" name="desc1" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                                    </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 2 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto2">
+                      <legend class="form42__contacts-title">Место 2</legend>
+                      <legend class="form42__contacts-title delete" onClick="del2()" id="delete_mesto2">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl2">
+                                  <div class="touch2"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext2">Ввод по объёму</span><br>
+                                  <span class="gabtext2 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom2 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom2" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob2"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar2 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">  Габариты (д, ш, в)<mark>*</mark></span>
+                          <input type="number" min='0' name="gab21" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min='0' name="gab22" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min='0' name="gab23" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob21"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves2" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov2"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">Одинаковые места <span class="form42__info-sign"><svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info"></use></svg><div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+
+                            <div class="min-btn" id="min_odin2"><b>-</b></div>
+                            <input type="number" name="om2" value="1" id="odin_mest2" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin2"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc2" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 3 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto3">
+                    <legend class="form42__contacts-title">Место 3</legend>
+                    <legend class="form42__contacts-title delete" onClick="del3()" id="delete_mesto3">&#10006;</legend>
+                    <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                        <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                            <div class="perekl3">
+                                <div class="touch3"></div>
+                            </div>
+                            <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                            font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                <span class="obtext3">Ввод по объёму</span><br>
+                                <span class="gabtext3 none_active_text"> Ввод по габаритам</span>
+                            </span>
+                          </label>
+
+                      <label class="obyom3 form42__row form42__row--half" style="width: 139px; ">
+                        <span class="form42__label">
+                          Объем
+                          <mark>*</mark>
+                        </span>
+                        <input type="number" min="0" name="obom3" placeholder="м3" class="text-center raz" />
+                        <p class="obsh">Общий объём:<span id="ob3"></span> м<sup>3</sup></p>
+                      </label>
+
+                      <label class="gabar3 form42__row form42__row--half" style="width: 139px;display: none;">
+                        <span class="form42__label">
+                          Габариты (д, ш, в)
+                          <mark>*</mark>
+                          
+                        </span>
+                      
+                        <input type="number" min='0' name="gab13" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                        <input type="number" min='0' name="gab23" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                        <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                        <input type="number" min='0' name="gab33" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                      <p class="obsh">Общий объём:<span id="ob31"></span> м<sup>3</sup></p>
+                      </label>
+
+
+                      <label class="form42__row form42__row--half" style="width: 139px">
+                        <span class="form42__label">
+                          Вес
+                          <mark>*</mark>
+                        </span>
+                        <input type="number" min="0" name="ves2" placeholder="кг" class="text-center raz" />
+                        <p class="obsh">Общий вес:<span id="ov3"></span> кг</p>
+                      </label>
+                      <div class="form42__row" style="width: 160px">
+                        <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                          <span class="form42__label">Одинаковые места<span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                          </span>
+                          <div class="min-btn" id="min_odin3"><b>-</b></div>
+                          <input type="number" name="om3" value="1" id="odin_mest3" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                          <div class="min-btn" id="max_odin3"><b>+</b></div>
+                        </label>
+                      </div>
+
+                      <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                        <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                          Наименование, характер груза
+                          <mark>*</mark>
+                        </span>
+                        <input type="text" name="desc3" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                      </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 4 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto4">
+                      <legend class="form42__contacts-title">Место 4</legend>
+                      <legend class="form42__contacts-title delete" onClick="del4()" id="delete_mesto4">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl4">
+                                  <div class="touch4"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext4">Ввод по объёму</span><br>
+                                  <span class="gabtext4 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom4 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom4" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob4"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar4 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab41" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab42" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab43" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob41"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves4" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov4"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin4"><b>-</b></div>
+                            <input type="number" name="om4" value="1" id="odin_mest4" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin4"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc4"  placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 5 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto5">
+                      <legend class="form42__contacts-title">Место 5</legend>
+                      <legend class="form42__contacts-title delete" onClick="del5()" id="delete_mesto5">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl5">
+                                  <div class="touch5"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext5">Ввод по объёму</span><br>
+                                  <span class="gabtext5 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom5 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom5" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob5"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar5 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab51" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab52" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab53" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob51"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves5" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov5"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin5"><b>-</b></div>
+                            <input type="number" value="1" name="om5" id="odin_mest5" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin5"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc5"  placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 6 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto6">
+                      <legend class="form42__contacts-title">Место 6</legend>
+                      <legend class="form42__contacts-title delete" onClick="del6()" id="delete_mesto6">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl6">
+                                  <div class="touch6"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext6">Ввод по объёму</span><br>
+                                  <span class="gabtext6 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom6 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom6" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob6"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar6 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab61" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab62" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab63" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob61"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves6" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov6"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin6"><b>-</b></div>
+                            <input type="number" value="1" name="om6" id="odin_mest6" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin6"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc6"  placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 7 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto7">
+                      <legend class="form42__contacts-title">Место 7</legend>
+                      <legend class="form42__contacts-title delete" onClick="del7()" id="delete_mesto7">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl7">
+                                  <div class="touch7"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext7">Ввод по объёму</span><br>
+                                  <span class="gabtext7 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom7 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom7" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob7"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar7 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab71" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab72" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab73" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob71"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves7" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov7"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin7"><b>-</b></div>
+                            <input type="number" value="1" name="om7" id="odin_mest7" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin7"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc7" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 8 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto8">
+                      <legend class="form42__contacts-title">Место 8</legend>
+                      <legend class="form42__contacts-title delete" onClick="del8()" id="delete_mesto8">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl8">
+                                  <div class="touch8"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext8">Ввод по объёму</span><br>
+                                  <span class="gabtext8 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom8 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom8" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob8"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar8 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab81" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab82" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab83" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob81"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves8" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ob8"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin8"><b>-</b></div>
+                            <input type="number" value="1" name="om8" id="odin_mest8" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin8"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc8" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 9 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto9">
+                      <legend class="form42__contacts-title">Место 9</legend>
+                      <legend class="form42__contacts-title delete" onClick="del9()" id="delete_mesto9">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl9">
+                                  <div class="touch9"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext9">Ввод по объёму</span><br>
+                                  <span class="gabtext9 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom9 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom9" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob9"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar9 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab91" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab92" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab93" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob91"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves9" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov9"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin9"><b>-</b></div>
+                            <input type="number" value="1" name="om9" id="odin_mest9" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin9"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc10" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 10 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto10">
+                      <legend class="form42__contacts-title">Место 10</legend>
+                      <legend class="form42__contacts-title delete" onClick="del10()" id="delete_mesto10">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl10">
+                                  <div class="touch10"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext10">Ввод по объёму</span><br>
+                                  <span class="gabtext10 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom10 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="obom10" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob10"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar10 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" min="0" name="gab101" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab102" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" min="0" name="gab103" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob101"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" min="0" name="ves10" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov10"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                              <span class="form42__info-sign">
+                              <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                              </span>
+                            </span>
+                            <div class="min-btn" id="min_odin10"><b>-</b></div>
+                            <input type="number" value="1" name="om10" id="odin_mest10" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin10"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="desc10" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+                  </div>
+                  <p id="add_mesto" class="add_el" onclick="addmesto()">+ Добавить грузовое место</p>
+
+
+                  <p class="dop_uslov">Дополнительные условия</p>
+
+                  <!-- 1 строка -->
+                  <div class="row">
+                                
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="obresh"/>
+                                        <span class="form42__checkbox-label">
+                                          Требуется обрешетка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Упаковка груза в жесткий деревянный решетчатый ящик.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="zagruz" />
+                                        <span class="form42__checkbox-label">
+                                          Требуется загрузка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Услуги грузчиков и специального оборудования при получении груза.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                                  
+                  </div>
+
+                  <!-- 2 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="naklad" />
+                                        <span class="form42__checkbox-label">
+                                          Прием и выдача по накладным
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Cоставление подробного описания груза при приеме и проверка соответствия при выдаче.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="vygruz" />
+                                        <span class="form42__checkbox-label">
+                                          Требуется выгрузка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Услуги грузчиков и специального оборудования при выдаче груза.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                  </div>
+
+                  <!-- 3 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="teplo" />
+                                        <span class="form42__checkbox-label">
+                                          Перевозка в тепле
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Требуется при перевозке продуктов, бытовой химии, медикаментов, животных и растений.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="hrup" />
+                                        <span class="form42__checkbox-label">
+                                          Перевозка хрупкого груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Требуется при перевозке электроники и бытовой техники, изделий из стекла, фарфора и керамики.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                  </div>
+
+                  <!-- 4 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="autoot"  id="hider1" />
+                                        <span class="form42__checkbox-label hide1">
+                                          Автоэкспедирование от адреса
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Доставка груза по городу от адреса заказчика до терминала компании.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                  
+
+                              
+                                    <div id="zabrat" style="margin-top: 15px;  border: 1px solid blue;     border-radius: 5px;   padding: 20px; display: none;">
+                                        <label class="form42__row form42__row--half" style="width: 100%">
+                                          <span class="form42__label">  Забрать по адресу   </span>
+                                          <input type="text" name="adresot" placeholder="" class="text-center" />
+                                        </label>
+                                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 10px;">
+                                          <span class="form42__label">  Когда забрать груз?   </span>
+
+                                          <input type="text" id="datecalend" placeholder="дд.мм.гггг" name="dayin">
+                                          <svg class="treug_moda_kek" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.53889 18.5708V15.3577H5V18.5719L1.53889 18.5708ZM5.77 18.5708V15.3577H9.61556V18.5719L5.77 18.5708ZM1.53889 14.643V11.072H5V14.643H1.53889ZM5.77 14.643V11.072H9.61556V14.643H5.77ZM1.53889 10.3585V7.14424H5V10.3585H1.53889ZM10.3856 18.5677V15.3577H14.2322V18.5719L10.3856 18.5677ZM5.77 10.3585V7.14424H9.61556V10.3585H5.77ZM15.0011 18.5677V15.3577H18.4622V18.5719L15.0011 18.5677ZM10.3844 14.643V11.072H14.2311V14.643H10.3844ZM6.15333 5.00142C6.14965 5.0962 6.10773 5.18604 6.0362 5.25241C5.96468 5.31879 5.86901 5.35665 5.76889 5.35821H5C4.89988 5.35665 4.80421 5.31879 4.73269 5.25241C4.66116 5.18604 4.61924 5.0962 4.61556 5.00142V1.7872C4.61924 1.69242 4.66116 1.60259 4.73269 1.53621C4.80421 1.46983 4.89988 1.43197 5 1.43042H5.76889C5.86901 1.43197 5.96468 1.46983 6.0362 1.53621C6.10773 1.60259 6.14965 1.69242 6.15333 1.7872V5.00142ZM15 14.643V11.072H18.4611V14.643H15ZM10.3844 10.3585V7.14424H14.2311V10.3585H10.3844ZM15 10.3585V7.14424H18.4611V10.3585H15ZM15.3844 5.00248C15.3808 5.09726 15.3388 5.18709 15.2673 5.25346C15.1958 5.31984 15.1001 5.35771 15 5.35926H14.2311C14.131 5.35771 14.0353 5.31984 13.9638 5.25346C13.8923 5.18709 13.8504 5.09726 13.8467 5.00248V1.78825C13.8504 1.69347 13.8923 1.60364 13.9638 1.53726C14.0353 1.47089 14.131 1.43302 14.2311 1.43147H15C15.1001 1.43302 15.1958 1.47089 15.2673 1.53726C15.3388 1.60364 15.3808 1.69347 15.3844 1.78825V5.00248ZM20 4.28785C19.993 3.90604 19.8276 3.54217 19.5397 3.27492C19.2517 3.00767 18.8643 2.8585 18.4611 2.85966H16.9233V1.78825C16.9178 1.30971 16.7122 0.852747 16.3518 0.517415C15.9913 0.182082 15.5052 -0.00430159 15 -0.000931647H14.2311C13.7259 -0.00430159 13.2398 0.182082 12.8793 0.517415C12.5189 0.852747 12.3133 1.30971 12.3078 1.78825V2.85966H7.69222V1.78825C7.68665 1.30971 7.48113 0.852747 7.12066 0.517415C6.76018 0.182082 6.27412 -0.00430159 5.76889 -0.000931647H5C4.49477 -0.00430159 4.00871 0.182082 3.64823 0.517415C3.28776 0.852747 3.08224 1.30971 3.07667 1.78825V2.85966H1.53889C1.13574 2.8585 0.7483 3.00767 0.460332 3.27492C0.172365 3.54217 0.00700439 3.90604 0 4.28785L0 18.5708C0.00700439 18.9526 0.172365 19.3165 0.460332 19.5838C0.7483 19.851 1.13574 20.0002 1.53889 19.999H18.4611C18.8643 20.0002 19.2517 19.851 19.5397 19.5838C19.8276 19.3165 19.993 18.9526 20 18.5708V4.28785Z" fill="#264C80"/>
+                                            </svg>
+                                          с
+                                          <input type="number" min="0" max="24" name="otime"  id="time_auto1" style="margin-right: 10px; padding: 7px;"> до
+                                          <input type="number" min="0" max="24" name="dtime"  id="time_auto2" style="padding: 7px;">
+                                        </label>
+                                      </div>
+                                      </div>
+                              
+                            
+                                      
+                                  <div class="form42__row col-lg-6" >
+                                    <label class="form42__checkbox">
+                                      <input type="checkbox" name="autodo" id="hider2"/>
+                                      <span class="form42__checkbox-label hide2">
+                                        Автоэкспедирование до адреса
+                                        <span class="form42__info-sign">
+                                          <svg width="21" height="21"><use xlink:href="img/sprite-icons.svg#info" /></svg>
+                                          <div class="steps__tip podskaz">Доставка груза по городу от терминала компании до адреса получателя.</div>
+                                        </span>
+                                      </span>
+                                    </label>
+                    
+                                    <div id="otdat" style="margin-top: 15px;  border: 1px solid blue;     border-radius: 5px;   padding: 20px; display: none;">
+                                    <label class="form42__row form42__row--half" style="width: 100%" >
+                                      <span class="form42__label">  Доставить по адресу   </span>
+                                      <input type="text" name="adresdo" placeholder="" class="text-center"/>
+                                    </label>
+                                    <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 10px;">
+                                      <span class="form42__label">  Когда доставить груз?   </span>
+
+                                        <div>
+                                      <input type="text" id="datecalendout" placeholder="дд.мм.гггг" class="calend" name="dayout">
+                                      <svg class="treug_moda_kek" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.53889 18.5708V15.3577H5V18.5719L1.53889 18.5708ZM5.77 18.5708V15.3577H9.61556V18.5719L5.77 18.5708ZM1.53889 14.643V11.072H5V14.643H1.53889ZM5.77 14.643V11.072H9.61556V14.643H5.77ZM1.53889 10.3585V7.14424H5V10.3585H1.53889ZM10.3856 18.5677V15.3577H14.2322V18.5719L10.3856 18.5677ZM5.77 10.3585V7.14424H9.61556V10.3585H5.77ZM15.0011 18.5677V15.3577H18.4622V18.5719L15.0011 18.5677ZM10.3844 14.643V11.072H14.2311V14.643H10.3844ZM6.15333 5.00142C6.14965 5.0962 6.10773 5.18604 6.0362 5.25241C5.96468 5.31879 5.86901 5.35665 5.76889 5.35821H5C4.89988 5.35665 4.80421 5.31879 4.73269 5.25241C4.66116 5.18604 4.61924 5.0962 4.61556 5.00142V1.7872C4.61924 1.69242 4.66116 1.60259 4.73269 1.53621C4.80421 1.46983 4.89988 1.43197 5 1.43042H5.76889C5.86901 1.43197 5.96468 1.46983 6.0362 1.53621C6.10773 1.60259 6.14965 1.69242 6.15333 1.7872V5.00142ZM15 14.643V11.072H18.4611V14.643H15ZM10.3844 10.3585V7.14424H14.2311V10.3585H10.3844ZM15 10.3585V7.14424H18.4611V10.3585H15ZM15.3844 5.00248C15.3808 5.09726 15.3388 5.18709 15.2673 5.25346C15.1958 5.31984 15.1001 5.35771 15 5.35926H14.2311C14.131 5.35771 14.0353 5.31984 13.9638 5.25346C13.8923 5.18709 13.8504 5.09726 13.8467 5.00248V1.78825C13.8504 1.69347 13.8923 1.60364 13.9638 1.53726C14.0353 1.47089 14.131 1.43302 14.2311 1.43147H15C15.1001 1.43302 15.1958 1.47089 15.2673 1.53726C15.3388 1.60364 15.3808 1.69347 15.3844 1.78825V5.00248ZM20 4.28785C19.993 3.90604 19.8276 3.54217 19.5397 3.27492C19.2517 3.00767 18.8643 2.8585 18.4611 2.85966H16.9233V1.78825C16.9178 1.30971 16.7122 0.852747 16.3518 0.517415C15.9913 0.182082 15.5052 -0.00430159 15 -0.000931647H14.2311C13.7259 -0.00430159 13.2398 0.182082 12.8793 0.517415C12.5189 0.852747 12.3133 1.30971 12.3078 1.78825V2.85966H7.69222V1.78825C7.68665 1.30971 7.48113 0.852747 7.12066 0.517415C6.76018 0.182082 6.27412 -0.00430159 5.76889 -0.000931647H5C4.49477 -0.00430159 4.00871 0.182082 3.64823 0.517415C3.28776 0.852747 3.08224 1.30971 3.07667 1.78825V2.85966H1.53889C1.13574 2.8585 0.7483 3.00767 0.460332 3.27492C0.172365 3.54217 0.00700439 3.90604 0 4.28785L0 18.5708C0.00700439 18.9526 0.172365 19.3165 0.460332 19.5838C0.7483 19.851 1.13574 20.0002 1.53889 19.999H18.4611C18.8643 20.0002 19.2517 19.851 19.5397 19.5838C19.8276 19.3165 19.993 18.9526 20 18.5708V4.28785Z" fill="#264C80"/>
+                                        </svg>
+                                      с
+                                      <input type="number" min="0" max="24"  name="otime1" id="time_auto3" style="margin-right: 9px; padding: 7px;"> до
+                                      <input type="number" min="0" max="24"  name="dtime1" id="time_auto4" style="padding: 7px;">
+                                    </div>
+                                    </label>
+                                  </div>
+                                  </div>
+                  </div>
+
+                  <p class="form42__title2" style="border-top:2px solid #264c80; padding-top: 4%;">Контактные данные</p>
+                                  
+                    <fieldset class="form42__contacts-set">
+                      <legend class="form42__contacts-title">Отправитель</legend>
+                      <div class="form42__line">
+                        <div class="form42__row form42__row--third" id="fiz_person">
+                          <label class="form42__checkbox">
+                            <input name="legal-type0" type="radio" checked="checked" />
+                            <span class="form42__checkbox-label" id="fiz_men_title">Физическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third" id="ur_person">
+                          <label class="form42__checkbox">
+                            <input name="legal-type0" type="radio" />
+                            <span class="form42__checkbox-label none_active_text" id="ur_men_title">Юридическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third"></div>
+                      </div>
+
+
+                      <div class="form42__line colonka" id="fiz_men">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Фамилия
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="ofamily" placeholder="Фамилия отправителя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Имя
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="oname" placeholder="Имя отправителя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Отчество</span>
+                          <input type="text" name="ootche" placeholder="Отчество отправителя" />
+                        </label>
+                      </div>
+
+                      <div class="form42__line none_block" id="ur_men">
+                          <label class="form42__row ur_inp">
+                            <span class="form42__label">
+                              Наименование организации
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="oorg" placeholder="Наименование"  />
+                          </label>
+                          <label class="form42__row ur_inp" style="margin-top: auto;">
+                            <span class="form42__label">
+                              Контактное лицо
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="oorgname" placeholder="Имя отправителя"/>
+                          </label>
+                        </div>
+                      
+
+                      <div class="form42__line">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Телефон
+                            <mark>*</mark>
+                          </span>
+                          <input type="tel" name="otel" placeholder="Телефон отправителя" required="required" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">E-mail</span>
+                          <input type="email"  name="omail" placeholder="E-mail отправителя" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Город</span>
+                          <input type="text" name="ogor" placeholder="Город отправителя" />
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form42__contacts-set">
+
+                      <legend class="form42__contacts-title">Получатель</legend>
+                      <div class="form42__line">
+                        <div class="form42__row form42__row--third" id="fiz_person1">
+                          <label class="form42__checkbox">
+                            <input name="legal-type1" type="radio" checked="checked" />
+                            <span class="form42__checkbox-label" id="fiz_men_title1">Физическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third" id="ur_person1">
+                          <label class="form42__checkbox">
+                            <input name="legal-type1" type="radio" />
+                            <span class="form42__checkbox-label none_active_text" id="ur_men_title1">Юридическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third"></div>
+                      </div>
+                      <div class="form42__line colonka" id="fiz_men1">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Фамилия
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="dfamily" placeholder="Фамилия получателя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Имя
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="dname" placeholder="Имя получателя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Отчество</span>
+                          <input type="text" name="dotche" placeholder="Отчество получателя" />
+                        </label>
+                      </div>
+
+                      <div class="form42__line none_block" id="ur_men1">
+                          <label class="form42__row ur_inp">
+                            <span class="form42__label">
+                              Наименование организации
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="dorg" placeholder="Наименование"/>
+                          </label>
+                          <label class="form42__row ur_inp" style="margin-top: auto;">
+                            <span class="form42__label">
+                              Контактное лицо
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="dorgname" placeholder="Имя отправителя"/>
+                          </label>
+                        </div>
+
+                      <div class="form42__line">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Телефон
+                            <mark>*</mark>
+                          </span>
+                          <input type="tel" name="dtel" placeholder="Телефон получателя" required="required" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">E-mail</span>
+                          <input type="email" name="dmail" placeholder="E-mail получателя" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Город</span>
+                          <input type="text" name="dgor" placeholder="Город получателя" />
+                        </label>
+                      </div>
+                    </fieldset>
+                    <label class="form42__checkbox">
+                      <input type="checkbox" id="terms1" onclick="test_terms1()" name="terms"/>
+                      <span class="form42__checkbox-label">Я даю согласие на обработку своих персональных данных*</span>
+
+                      <a onclick="print($('#modal_okno'));" class="form42__print-btn " style="top: 92.5%; margin-right: 15px; cursor: pointer">
+                        <svg width="16" height="16" class="form42__print-icon"><use xlink:href="img/sprite-icons.svg#print"></use></svg>
+                        Распечатать
+                      </a>
+
+                    </label>
+
+
+                    <div class="form42__result-bottom">
+                      <button id="but_zay" type="submit" class="btn btn--size-big btn--block" disabled>
+                        <span>ОТПРАВИТЬ ЗАЯВКУ</span>
+                      </button>
+                    </div>                 
+          </section>
+        </form>
+      </div>
+    </div>
+</div>
+
+<!-- СКРИПТЫ 5 -->
+
+
+<script>
+  var swiperOptions = {
+    documents: {
+      loop: true,
+      pagination: {
+        el: ".documents__pages",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          return current + "/" + total;
+        }
+      }
+    }
+  };
+</script>
+
+  <!-- Все скрипты с коммитами + отправка писем на почту с помощью PHP моих рук творение, не судите строго, я всего лишь стажёр))
+    на этом сайте писал Miahgen - mixa.oznob38@gmail.com
+  PS соре за говнокод с добавлением мест, надо было срочно сделать, другого быстро не придумал
+  PPS оказалось что нужно было не так срочно, просто босс подгонял, а в итоге я столько понаписал там, что уже не успею переписать до продакшена
+  PPPS Блен, зачем я так наговнокодил, разработка превратилась в болото, устал всё тащить, я рипаюсь
+  -->
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/scripts.js" defer></script>
+  <script src="js/main.bundle.b0cd.js" defer></script>
+<script>
+$(function(){
+$('.form42__point1 .select__value').css('background-image','url("../img/dotA.png")');
+$('.form42__point2 .select__value').css('background-image','url("../img/dotB.png")');
+});
+</script>
+
+  <noscript>Этот сайт использует JavaScript. Пожалуйста, включите JavaScript в Вашем браузере.</noscript>
+</div>
+</body>
+
+</html>

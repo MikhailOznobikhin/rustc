@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="515" height="515">
+    <defs>
+        <linearGradient id="e" x1="1.05" y1=".01" x2=".13" y2=".81" xlink:href="#a"/>
+        <linearGradient id="f" x1=".92" y1="-.34" x2=".2" y2=".95" xlink:href="#a"/>
+        <linearGradient id="g" x1="1.15" y1="-.03" x2=".16" y2=".81" xlink:href="#a"/>
+        <radialGradient id="a" cx="6538.3" cy="1092.96" r="889.47" gradientTransform="matrix(.748 0 0 .748 1723 288.58)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="d" cx="42.28" cy="521.41" r="786.12" xlink:href="#a"/>
+        <clipPath id="b">
+            <circle data-name="Ellipse 85" cx="237.5" cy="237.5" r="237.5" fill="#fff"/>
+        </clipPath>
+        <clipPath id="c">
+            <path data-name="Rectangle 268" fill="none" d="M0 0h593.75v593.75H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Ellipse 92" fill="none" stroke="#ff1400" stroke-width="2">
+        <circle cx="257.5" cy="257.5" r="257.5" stroke="none"/>
+        <circle cx="257.5" cy="257.5" r="256.5"/>
+    </g>
+    <g data-name="Mask Group 56" transform="translate(20 20)" clip-path="url(#b)">
+        <path data-name="Rectangle 267" fill="#008cad" d="M0-69.27h593.75v593.75H0z"/>
+        <g data-name="Group 951" clip-path="url(#c)" transform="translate(0 -69.27)">
+            <path data-name="Path 3155" d="M-267.67 312.21l482.6-363.6 163.1 14.24-627.88 407.2 14.52 22.57 824.4-431.55L729.78 9.64l-35.62 189.89-765.9 319.05 50.38 40.63L719.1 335.34l-24.94 57.28L-6.86 582.8l22.2 48.16 691.3-94.58-42.76 108.66-204.83 69.46-495.2-30.28-258.23-244.01z" transform="translate(-55.2 -9.64)" opacity=".5" fill="url(#a)"/>
+        </g>
+        <path data-name="Rectangle 269" fill="url(#d)" d="M0 0h593.75v593.75H0z" transform="translate(0 -69.27)"/>
+        <g data-name="Group 954" clip-path="url(#c)" fill="#fff" transform="translate(0 -69.27)">
+            <path data-name="Path 3156" d="M285.85 524.85L162 554.43l25.38-15.7s2.6-8.78 11.6-9.56c0 0-.04-13.08 15.36-13.7 0 0-.01-18.71 17.93-21.69s21.7 14 21.7 14 10.13-4.84 12.65 4.52c0 0 8.62.16 7.88 8.67z"/>
+            <path data-name="Path 3157" d="M10.14 232.21l85.35-45.24-14.83-.6S75.2 169.7 61.2 172.68s-11.57 16.56-11.57 16.56-9.57-3.36-12.3 10c0 0-11.88.11-11.31 15.19z"/>
+            <path data-name="Path 3158" d="M410.84.44s-9.73 5.48-5.89 25.91c0 0-20.7 6.22-18.31 29.35 0 0-6.83-.5-9.95 11.11l-29 28.9L540.57-1.3z"/>
+            <g data-name="Group 953" transform="translate(319.86 429.52)">
+                <circle data-name="Ellipse 82" cx="79.44" cy="79.44" r="79.44" transform="translate(197.1)"/>
+                <circle data-name="Ellipse 83" cx="55.53" cy="55.53" r="55.53" transform="rotate(-80.64 178.28 25)"/>
+                <circle data-name="Ellipse 84" cx="75.41" cy="75.41" r="75.41" transform="translate(0 120.88)"/>
+                <path data-name="Rectangle 270" d="M197.1 141.37h76.78v22.86H197.1z"/>
+            </g>
+        </g>
+        <path data-name="Path 3159" d="M178.72 478.96l99.95-23.55-9.1-3.76s.6-5.55-6.14-5.94c0 0-3.76-8.12-13.46-4.55 0 0-1.38-13.07-17.8-10.7s-14.65 18.6-14.65 18.6-11.85 1.54-13.27 12.87c0 0-8.9.2-10.29 9.1z" fill="#f1f2f2"/>
+        <path data-name="Path 3160" d="M593.75 420.57s-49.88 5.35-46.31 65.31c0 0-60.57-15.43-77.78 38.6h124.09z" fill="#f1f2f2"/>
+        <path data-name="Path 3161" d="M426.51-69.27s-13.46 9.3-9.1 29.49c0 0-21.77 2.57-19.4 27.31 0 0-11.48 2.57-15.24 17.81l146.66-74.61z" fill="#f1f2f2"/>
+    </g>
+    <g data-name="Group 963">
+        <path data-name="Path 3162" d="M491.73 155.96s27.32 21 1.2 66.27z" fill="#fff"/>
+        <path data-name="Path 3163" d="M494.4 138.95v160.31L324.6 258.9V89.07z" fill="#ffd286"/>
+        <path data-name="Path 3164" d="M324.6 89.07L207.02 153.2v157.94l117.56-52.25z" fill="#f4bd6c"/>
+        <path data-name="Path 3165" d="M207.03 311.13l146.06 33.25 141.32-45.12-169.82-40.38z" fill="#dda254"/>
+        <path data-name="Path 3166" d="M240.88 219.4s.59 12.76 11.28 11.87 27.9-49.28 27.9-81.34-10.39-40.67-33.25-35.03-129.14 79.56-129.14 79.56 8.31 19 38.3 15.14c0 0 8.61 19 38.6 13.36 0 0 12.46 11.78 25.53 6.83 8.39-3.17 20.77-10.4 20.77-10.4z" fill="#fff"/>
+        <path data-name="Path 3167" d="M155.97 209.6l50.57-28.84-48.31 32.3a17.89 17.89 0 01-2.26-3.46z" fill="#b1c2b3"/>
+        <path data-name="Path 3168" d="M194.56 222.96l33.93-20.3-31.9 21.97z" fill="#b1c2b3"/>
+        <path data-name="Path 3169" d="M240.88 219.4a57.5 57.5 0 0011.39-8.45s-2.83 5.92-11.06 10.8z" fill="#b1c2b3"/>
+        <path data-name="Path 3170" d="M398.39 110.75v165.68L273.1 326.18l33.12 7.54 131.07-48.04v-163.5z" fill="#fffad7"/>
+        <g data-name="Group 960" stroke-width="1.42" stroke="#a73e5c" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <g data-name="Group 956">
+                <path data-name="Line 1210" d="M336.31 229.06l10.06 2.3"/>
+                <path data-name="Line 1211" d="M351.55 232.54l6.1 1.39"/>
+                <path data-name="Line 1212" d="M362.22 234.97l22.25 5.07"/>
+                <path data-name="Line 1213" d="M389.08 241.1l2.1.47"/>
+            </g>
+            <g data-name="Group 957">
+                <path data-name="Line 1214" d="M336.08 235.71l19.02 4.33"/>
+                <path data-name="Line 1215" d="M359.85 241.13l3.17.72"/>
+                <path data-name="Line 1216" d="M370.31 243.51l20.64 4.71"/>
+            </g>
+            <g data-name="Group 958">
+                <path data-name="Line 1217" d="M335.85 242.36l13.94 3.18"/>
+                <path data-name="Line 1218" d="M358.04 247.41l7.29 1.66"/>
+                <path data-name="Line 1219" d="M370.08 250.16l2.22.51"/>
+                <path data-name="Line 1220" d="M377.05 251.75l13.66 3.12"/>
+            </g>
+            <g data-name="Group 959">
+                <path data-name="Line 1221" d="M335.62 249l41.2 9.4"/>
+                <path data-name="Line 1222" d="M380.16 259.16l10.32 2.35"/>
+            </g>
+        </g>
+        <g data-name="Group 962">
+            <g data-name="Group 961" fill="#a73e5c">
+                <path data-name="Path 3171" d="M459.23 140.62l-5.9 8.02 3.56.98v12.66l4.67 1.3V150.9l3.57.99z"/>
+                <path data-name="Path 3172" d="M473.8 144.65l-5.9 8.01 3.56.99v12.66l4.67 1.3v-12.66l3.56.99z"/>
+                <path data-name="Path 3173" d="M476.13 171.94l-19.36-5.36v-3.04l19.36 5.36z"/>
+            </g>
+            <path data-name="Path 3174" d="M483.72 177.92l-34.41-9.52v-34.41l34.4 9.52z" fill="none" stroke="#a73e5c" stroke-miterlimit="10"/>
+        </g>
+        <path data-name="Path 3175" d="M273.1 326.18l125.29-49.75 38.91 9.25-131.07 48.04z" fill="#e2d69f"/>
+        <path data-name="Path 3176" d="M487.09 299.26l-162.5-37.4-110.23 49.27s99.66-30.67 141.86-29.48 90.28 15.43 97.11 26.52z" fill="#231f20" opacity=".2"/>
+        <path data-name="Path 3177" d="M251.17 232.46s-10.3 2.28-10.99-11.67c0 0-12.37 8.8-21.97 10.98s-10.09-.45-10.09-.45v11.39s10.3 3.56 28.5-9.26c0 0 4.25 5.84 14.55-.99z" fill="#231f20"/>
+        <path data-name="Path 3178" d="M247.65 233.25s-8.34 1.04-8.62-9.8c0 0-15.85 12.65-29.7 10.36v3.61a33.21 33.21 0 0027.75-9.1s1.46 8.34 10.57 4.93z" fill="#231f20"/>
+        <path data-name="Path 3179" d="M328.35 92.83l163.38 47.8v90.7s-64.02-91.79-163.38-115.14z" fill="#fff" opacity=".5"/>
+        <path data-name="Path 3180" d="M320.04 257.1V95.6l-39.98 22.57s20.19-2.1 26.13 53.77 5.94 88.4 5.94 88.4z" fill="#231f20" opacity=".2"/>
+        <path data-name="Path 3181" d="M204.21 179.03l-49.43 28.2s-23.45 3.41-33.7-12.32l15.74-10.4s-2.82 11.14 9.8 13.51 57.6-19 57.6-19z" fill="#e9f2d7"/>
+        <path data-name="Path 3182" d="M162.65 213.64s13.5 12.79 31.91 7.15l33.05-20.69s-33.37 21.89-54.35 6.53z" fill="#e9f2d7"/>
+        <path data-name="Path 3183" d="M200.7 224.63s7.72 5.56 15.83 3.38 25.36-10.69 35.74-19.6c0 0-25.95 15.84-40.74 9.1z" fill="#e9f2d7"/>
+        <path data-name="Path 3184" d="M253.79 212.42s-5.87 8.03-10.69 9.81c0 0 1.56 8.15 9.17 6.97s22.6-38.74 24.82-61.01c0 0-11.43 42.45-19.74 48.98s-3.56-4.75-3.56-4.75z" fill="#e9f2d7"/>
+        <path data-name="Path 3185" d="M162.65 213.64l44.38-30.16-39.98 33.4a10 10 0 01-4.4-3.24z" fill="#e9f2d7"/>
+        <path data-name="Path 3186" d="M229.64 205.45l-28.94 19.18 2.9 1.65z" fill="#e9f2d7"/>
+        <path data-name="Path 3187" d="M253.79 212.42s-6.62 8.6-10.69 9.81c0 0-.14 1.29 1.82 4.05 0 0 8.57-5.77 8.87-13.86z" fill="#e9f2d7"/>
+        <path data-name="Path 3188" d="M495.99 173.19v39.58s7.1-13.29 6.93-25.93c0 0-5.35-.4-6.93-13.65z" fill="#e9f2d7"/>
+        <path data-name="Path 3189" d="M497.23 189.71v17.22a85.12 85.12 0 003.86-11.5s-2.63-1.41-3.86-5.72z" fill="#e9f2d7"/>
+        <path data-name="Path 3190" d="M187.65 154.32L9 268.58v98.02l225.97-118.18s18.52-90.15-47.32-94.1z" transform="translate(21.69 -20.34)" fill="url(#e)"/>
+        <path data-name="Path 3191" d="M333.1 336.75L187.02 303.5 10.7 386.82 0 454.91z" transform="translate(20 7.63)" fill="url(#f)"/>
+        <path data-name="Path 3192" d="M183.59 237.9v77.9L18.35 393.87l3.26-73.24z" transform="translate(23.44 -4.67)" fill="url(#g)"/>
+        <path data-name="Path 3193" d="M108.62 139.4H98.08s-4.75-12.18-16.63-10.7-9.5 14.7-9.5 14.7-9.65-1.78-11.28 9.2c0 0-10.56.56-10.7 13.35L39.44 176.5z" fill="#f1f2f2"/>
+    </g>
+</svg>

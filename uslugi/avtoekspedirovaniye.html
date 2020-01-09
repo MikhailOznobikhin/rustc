@@ -1,0 +1,3377 @@
+<!doctype html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <title>Услуги и цены</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="icon" type="image/png" href="../favicon.png" sizes="16x16" />
+
+  <link rel="preload" href="../js/main.bundle.b0cd.js" as="script" />
+  <link rel="preload" href="../css/app.f636.css" as="style" />
+  <link rel="preload" href="../fonts/segoeui/segoe_ultralight.fe64.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_ultralight-italic.c2e2.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_light.03ad.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_light-italic.7cd7.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_normal-italic.2aca.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_semibold-italic.2ab2.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_normal.a66a.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_semibold.87bd.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_bold.db5a.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/segoeui/segoe_bold-italic.8f46.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.f636.css" />
+  <script  src="../js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+
+</head>
+
+<body>
+  <div id="app" class="grid grid--sidebar">
+    <header class="header">
+      <div class="header__container">
+        <figure class="logo">
+          <a href="/" title="Транспортная компания РТС" class="logo__link">
+            <img src="#" srcset="../img/components/logo/logo.png 1x, ../img/components/logo/logo@2x.png 2x" width="165"
+              height="100" alt="Логотип Транспортной компании РТС" class="logo__img" />
+          </a>
+        </figure>
+        <div class="header__main-contacts">
+          <button onclick="open_modal()" class="btn header__order-btn js-modal">
+            <span>ОФОРМИТЬ ЗАЯВКУ</span>
+          </button>
+          <a href="tel:88001004979" class="header__phone-btn">
+            <span class="header__phone-btn-text">8-800-100-4979</span>
+            <svg width="20" height="20" class="header__phone-btn-icon">
+              <use xlink:href="../img/sprite-icons.svg#phone" />
+            </svg>
+          </a>
+
+          <!-- Окрытие меню с телефона -->   
+          <button aria-label="Меню" id="open_md_sm" class="header__menu-btn" onClick='vyp_uslugi()'>
+            <svg width="28" height="28">
+              <use xlink:href="../img/sprite-icons.svg#menu" />
+            </svg>
+          </button>
+
+          <!-- Закрытие меню -->
+          <button aria-label="Меню" id="close_md_sm" class="header__menu-btn none_block" onClick='hide_uslugi()'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><style>.a,.b{fill:#fff;}.a{opacity:0;}</style></defs><rect class="a" width="28" height="28"/><path class="b" d="M21.941,18.9,14,10.958,6.059,18.9A1.384,1.384,0,0,1,4.1,16.942L12.042,9,4.1,1.058A1.384,1.384,0,0,1,6.059-.9L14,7.042,21.941-.9A1.384,1.384,0,0,1,23.9,1.058L15.958,9,23.9,16.942A1.384,1.384,0,0,1,21.941,18.9Z" transform="translate(0 5)"/></svg>
+          </button>
+        </div>
+
+<!-- Меню для телефонов -->
+<div class="menu_sm menu_sm_marg none_block" style="top: 0px;">
+
+  <ul style="list-style: none; font-size: 16px;">
+    <li class="nav__item">
+      <a href="../index.html" class="nav__link">Главная</a>
+    </li>
+    <li class="nav__item drop" onclick="open_sm_us()">
+      <a class="nav__link">Услуги и цены </a> 
+      <svg id="menu_sm_treug" class="treug sm_menu_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+      </svg>
+    </li>
+    <ul class="sub_sm none_block">
+      <li class="nav__submenu-item">
+        <a href="../uslugi/perevozka-sbornykh-gruzov.html" class="nav__submenu-link small_pad">Перевозка сборных грузов</a> </li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/khraneniye-gruzov-na-sklade.html" class="nav__submenu-link small_pad">Хранение груза на складе</a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/perevozka-khrupkogo-gruza.html" class="nav__submenu-link small_pad">Перевозка хрупкого груза </a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/avtoekspedirovaniye.html" class="nav__submenu-link small_pad">Автоэкспедирование</a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/perevozka-v-teple.html" class="nav__submenu-link small_pad">Перевозка в тепле</a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/pogruzochno-razgruzochnyye-uslugi.html" class="nav__submenu-link small_pad">Погрузочно-разгрузочные услуги</a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/upakovka.html" class="nav__submenu-link small_pad">Упаковка</a></li>
+      <li class="nav__submenu-item">
+        <a href="../uslugi/perevozka-po-nakladnym.html" class="nav__submenu-link small_pad">Перевозка по накладным</a></li>
+    </ul>
+
+    <li class="nav__item">
+      <a href="../documents.html" class="nav__link">Документы</a>
+    </li>
+    <li class="nav__item">
+      <a href="../about.html" class="nav__link">О компании</a>
+    </li>
+    <li class="nav__item">
+      <a href="../contacts.html" class="nav__link">Контакты и филиалы</a>
+    </li>
+  </ul>
+
+  <div class="goroda" style="width: 106%;">
+    <hr class="hr_white">
+<div onclick="open_info_spb()" class="gorod spb_sm"><p>Санкт-Петербург<svg id="spb_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+</svg></p>
+          <div class="info_gor none_block">
+                <div class="header__contacts-phones">
+                  <a href="tel:88129224342" class="header__contacts-phone">+7 (812) 922-43-42</a>
+                  <br />
+                  <a href="tel:88129225432" class="header__contacts-phone">+7 (812) 922-54-32</a>
+                </div>
+                <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;">ул. Калинина, 57</div>
+                <div class="header__contacts-hours" style="width: 100%;">
+                  Пн - Пт (9:00 - 19:00)
+                  <br />Сб (9:00 - 14:00)
+                </div>
+          </div>
+</div>
+    <hr class="hr_white">
+
+<div onclick="open_info_msk()" class="gorod msk_sm"><p>Москва  <svg id="msk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+</svg></p>
+        <div class="info_gor none_block">
+          <div class="header__contacts-phones">
+            <a href="+74993439471" class="header__contacts-phone">+7 (499) 343-94-71</a>
+          </div>
+          <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;">Ярославское шоссе, Северянинский проезд, влад 3.</div>
+          <div class="header__contacts-hours" style="width: 100%;">
+            Пн - Пт (9:00 - 18:00)
+            <br />Сб - Вс (Выходной)
+          </div>
+    </div>
+</div>
+    <hr class="hr_white">
+    
+
+    
+    <div onclick="open_info_nsk()" class="gorod nsk_sm"><p>Новосибирск<svg id="nsk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+    </svg>
+
+    </p>
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+79835106887" class="header__contacts-phone">+7 (983) 510-68-87</a></div>
+        <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;">ул. Писарева д.121, склад 14</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          Пн - Пт (9:00 - 18:00)
+          <br />Сб - Вс (Выходной)
+        </div>
+  </div>
+    
+   
+    </div>
+    <hr class="hr_white">
+    <div onclick="open_info_krs()" class="gorod krs_sm"><p>Красноярск
+      <svg id="krs_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+      </svg>
+    </p>
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+79835081202" class="header__contacts-phone">+7 (983) 508-12-02</a></div>
+        <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;">Северное шоссе, 11</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          Пн - Пт (9:00 - 18:00)
+          <br />Сб - Вс (Выходной)
+        </div>
+  </div>
+</div>
+    <hr class="hr_white">
+  
+    <div onclick="open_info_irk()" class="gorod irk_sm"><p>Иркутск
+      <svg id="irk_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+      </svg>
+    </p>
+
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones">
+          <a href="tel:+78001004879" class="header__contacts-phone">+7 (800) 100-49-79</a><br>
+          <a href="tel:+79086632030" class="header__contacts-phone">+7 (908) 663-20-30</a>
+        </div>
+        <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;"><p>ул. Касьянова д.26, оф.2,3,4</p>
+          <p class="header__contacts-street" style="margin: 0 0 0 -20px; width: auto;">ул. Иркутная 2 стр.17</p></div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          Пн - Пт (9:00 - 18:00)
+          <br />Сб - Вс (Выходной)
+        </div>
+  </div>
+    </div>
+    <hr class="hr_white">
+    <div onclick="open_info_udu()" class="gorod udu_sm"><p>Улан-Удэ
+      <svg id="udu_treug" class="treug sm_gor_treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+      </svg>
+    </p>
+    
+      <div class="info_gor none_block">
+        <div class="header__contacts-phones"><a href="tel:+73012204117" class="header__contacts-phone">+7 (3012) 204-117</a></div>
+        <div class="header__contacts-street" style="padding: 0px 0px 0px 22px; margin: 20px 0 20px 4px; width: 100%;">ул. Комарова, 122</div>
+        <div class="header__contacts-hours" style="width: 100%;">
+          Пн - Пт (9:00 - 18:00)
+          <br />Сб - Вс (Выходной)
+        </div>
+  </div>
+</div>
+    <hr class="hr_white">
+
+  </div>
+
+</div>
+
+<!-- Скрипты открытия информации о городах -->
+<script>
+function open_info_spb(){
+  if($('.spb_sm .info_gor').hasClass('none_block')){
+  $('.spb_sm .info_gor').removeClass('none_block')
+  $('.msk_sm .info_gor').addClass('none_block')
+  $('.nsk_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').addClass('none_block')
+  $('.krs_sm .info_gor').addClass('none_block')
+  $('.udu_sm .info_gor').addClass('none_block')
+  $('#spb_treug').addClass('sm_meny_rot');
+  $('#msk_treug').removeClass('sm_meny_rot');
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  $('#irk_treug').removeClass('sm_meny_rot');
+  $('#krs_treug').removeClass('sm_meny_rot');
+  $('#udu_treug').removeClass('sm_meny_rot');
+  }else{
+    $('.spb_sm .info_gor').addClass('none_block')
+    $('#spb_treug').removeClass('sm_meny_rot');}
+}
+function open_info_msk(){
+  if($('.msk_sm .info_gor').hasClass('none_block')){
+  $('.msk_sm .info_gor').removeClass('none_block')
+  $('.spb_sm .info_gor').addClass('none_block')
+  $('.nsk_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').addClass('none_block')
+  $('.krs_sm .info_gor').addClass('none_block')
+  $('.udu_sm .info_gor').addClass('none_block')
+  $('#spb_treug').removeClass('sm_meny_rot');
+  $('#msk_treug').addClass('sm_meny_rot');
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  $('#irk_treug').removeClass('sm_meny_rot');
+  $('#krs_treug').removeClass('sm_meny_rot');
+  $('#udu_treug').removeClass('sm_meny_rot');
+  }else{$('.msk_sm .info_gor').addClass('none_block')
+  $('#msk_treug').removeClass('sm_meny_rot');
+  }
+}
+function open_info_nsk(){
+  if($('.nsk_sm .info_gor').hasClass('none_block')){
+  $('.nsk_sm .info_gor').removeClass('none_block')
+  $('.msk_sm .info_gor').addClass('none_block')
+  $('.spb_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').addClass('none_block')
+  $('.krs_sm .info_gor').addClass('none_block')
+  $('.udu_sm .info_gor').addClass('none_block')
+  $('#spb_treug').removeClass('sm_meny_rot');
+  $('#msk_treug').removeClass('sm_meny_rot');
+  $('#nsk_treug').addClass('sm_meny_rot');
+  $('#irk_treug').removeClass('sm_meny_rot');
+  $('#krs_treug').removeClass('sm_meny_rot');
+  $('#udu_treug').removeClass('sm_meny_rot');
+  }else{$('.nsk_sm .info_gor').addClass('none_block')
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  }
+}
+function open_info_irk(){
+  if($('.irk_sm .info_gor').hasClass('none_block')){
+    $('.nsk_sm .info_gor').addClass('none_block')
+  $('.msk_sm .info_gor').addClass('none_block')
+  $('.spb_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').removeClass('none_block')
+  $('.krs_sm .info_gor').addClass('none_block')
+  $('.udu_sm .info_gor').addClass('none_block')
+  $('#spb_treug').removeClass('sm_meny_rot');
+  $('#msk_treug').removeClass('sm_meny_rot');
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  $('#irk_treug').addClass('sm_meny_rot');
+  $('#krs_treug').removeClass('sm_meny_rot');
+  $('#udu_treug').removeClass('sm_meny_rot');
+  }else{$('.irk_sm .info_gor').addClass('none_block')
+  $('#irk_treug').removeClass('sm_meny_rot');}
+}
+function open_info_krs(){
+  if($('.krs_sm .info_gor').hasClass('none_block')){
+    $('.nsk_sm .info_gor').addClass('none_block')
+  $('.msk_sm .info_gor').addClass('none_block')
+  $('.spb_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').addClass('none_block')
+  $('.krs_sm .info_gor').removeClass('none_block')
+  $('.udu_sm .info_gor').addClass('none_block')
+  $('#spb_treug').removeClass('sm_meny_rot');
+  $('#msk_treug').removeClass('sm_meny_rot');
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  $('#irk_treug').removeClass('sm_meny_rot');
+  $('#krs_treug').addClass('sm_meny_rot');
+  $('#udu_treug').removeClass('sm_meny_rot');
+  }else{$('.krs_sm .info_gor').addClass('none_block')
+  $('#krs_treug').removeClass('sm_meny_rot');}
+}
+function open_info_udu(){
+  if($('.udu_sm .info_gor').hasClass('none_block')){
+    $('.nsk_sm .info_gor').addClass('none_block')
+  $('.msk_sm .info_gor').addClass('none_block')
+  $('.spb_sm .info_gor').addClass('none_block')
+  $('.irk_sm .info_gor').addClass('none_block')
+  $('.krs_sm .info_gor').addClass('none_block')
+  $('.udu_sm .info_gor').removeClass('none_block')
+  $('#spb_treug').removeClass('sm_meny_rot');
+  $('#msk_treug').removeClass('sm_meny_rot');
+  $('#nsk_treug').removeClass('sm_meny_rot');
+  $('#irk_treug').removeClass('sm_meny_rot');
+  $('#krs_treug').removeClass('sm_meny_rot');
+  $('#udu_treug').addClass('sm_meny_rot');
+  }else{$('.udu_sm .info_gor').addClass('none_block')
+  $('#udu_treug').removeClass('sm_meny_rot');}
+}
+
+</script>
+
+<!-- Скрипт появления мобильного меню -->
+<script>
+  function vyp_uslugi(){
+    $('#open_md_sm').addClass('none_block');
+    $('#close_md_sm').removeClass('none_block');
+    $('.header').css('background-color', '#396777')
+    $('.main').addClass('none_block');
+    $('.menu_sm').removeClass('none_block');
+
+    $('.footer').addClass('none_block');
+    $('.grid').addClass('bg_color_open');
+    $('.grid').removeClass('bg_color_close');
+    $('.sidebar').addClass('none_block');
+        
+    console.log('Показать мобильное окно')   
+  }
+</script>
+
+<!-- Скрипт скрытия мобильного меню -->
+<script>
+  function hide_uslugi(){
+    $('#open_md_sm').removeClass('none_block');
+    $('#close_md_sm').addClass('none_block');
+    $('.main').removeClass('none_block');
+
+    
+    $('.header').css('background-color', 'rgba(0, 0, 0, .4);')
+    $('.menu_sm').addClass('none_block');
+
+    $('.steps').removeClass('none_block');
+    $('.advantages').removeClass('none_block');
+    $('.about').removeClass('none_block');
+    $('.footer').removeClass('none_block');
+    
+    $('.grid').addClass('bg_color_close');
+    $('.grid').removeClass('bg_color_open');
+    $('.sidebar').removeClass('none_block');
+
+    console.log('Скрыть мобильное окно')
+  }
+</script>
+
+<!-- скрипт выпадающего списка на мобиле -->
+<script>
+function open_sm_us(){
+  if($('.sub_sm').hasClass('none_block') == true){
+    $('.sub_sm').removeClass('none_block');
+    $('#menu_sm_treug').addClass('sm_meny_rot')
+  }else{
+    $('.sub_sm').addClass('none_block');
+    $('#menu_sm_treug').removeClass('sm_meny_rot')
+  }
+}
+</script>       
+
+
+
+
+        <div class="header__contacts">
+            <ul class="header__branches js-tabs">
+              <li class="header__branches-item">
+                <button data-tabs-target="#city1" class="header__branches-btn">Санкт-Петербург</button>
+              </li>
+              <li class="header__branches-item">
+                <button data-tabs-target="#city2" class="header__branches-btn">Москва</button>
+              </li>
+              <li class="header__branches-item">
+                <button data-tabs-target="#city3" class="header__branches-btn">Новосибирск</button>
+              </li>
+              <li class="header__branches-item">
+                <button data-tabs-target="#city4" class="header__branches-btn">Красноярск</button>
+              </li>
+              <li class="header__branches-item is-active">
+                <button data-tabs-target="#city5" class="header__branches-btn">Иркутск</button>
+              </li>
+              <li class="header__branches-item">
+                <button data-tabs-target="#city6" class="header__branches-btn">Улан-Удэ</button>
+              </li>
+            </ul>
+            <ul class="header__contacts-list">
+              <li id="city1" class="header__contacts-item">
+                <div class="header__contacts-street">ул. Калинина, 57</div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 19:00)
+                  <br />Сб (9:00 - 14:00)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="tel:88129224342" class="header__contacts-phone">+7 (812) 922-43-42</a>
+                  <br />
+                  <a href="tel:88129225432" class="header__contacts-phone">+7 (812) 922-54-32</a>
+                </div>
+              </li>
+  
+              <li id="city2" class="header__contacts-item">
+                <div class="header__contacts-street">Ярославское шоссе, Северянинский проезд, влад 3.</div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="+74993439471" class="header__contacts-phone">+7 (499) 343-94-71</a>
+                </div>
+              </li>
+  
+              <li id="city3" class="header__contacts-item">
+                <div class="header__contacts-street">ул. Писарева д.121, склад 14</div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="tel:+79835106887" class="header__contacts-phone">+7 (983) 510-68-87</a>
+                </div>
+              </li>
+  
+              <li id="city4" class="header__contacts-item">
+                <div class="header__contacts-street">Северное шоссе, 11</div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="tel:+79835081202" class="header__contacts-phone">+7 (983) 508-12-02</a>
+                </div>
+              </li>
+  
+              <li id="city5" class="header__contacts-item is-active">
+                <div class="header__contacts-street">
+                  <p>ул. Касьянова д.26, оф.2,3,4</p>
+                  <p class="header__contacts-street" style="margin: 0 0 0 -20px; width: auto;">ул. Иркутная 2 стр.17</p>
+                </div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="tel:+78001004879" class="header__contacts-phone">+7 (800) 100-49-79</a><br>
+                  <a href="tel:+79086632030" class="header__contacts-phone">+7 (908) 663-20-30</a>
+                </div>
+              </li>
+  
+              <li id="city6" class="header__contacts-item">
+                <div class="header__contacts-street">ул. Комарова, 122</div>
+                <div class="header__contacts-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+                <div class="header__contacts-phones">
+                  <a href="tel:+73012204117" class="header__contacts-phone">+7 (3012) 204-117</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+      <nav class="nav js-nav header__nav">
+        <div class="container">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../index.html" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item nav__item--drop is-active">
+              <a href="../services.html" class="nav__link">Услуги и цены</a>
+              <div class="nav__submenu-box" style="z-index: 9;">
+                <div class="nav__submenu-container">
+                  <ul class="nav__submenu-list">
+                    <li class="nav__submenu-item">
+                      <a href="perevozka-sbornykh-gruzov.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu1" />
+                          </svg>
+                        </figure>Перевозка сборных грузов
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="khraneniye-gruzov-na-sklade.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu2" />
+                          </svg>
+                        </figure>Хранение груза на складе
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="perevozka-khrupkogo-gruza.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu3" />
+                          </svg>
+                        </figure>Перевозка хрупкого груза
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item is-active">
+                      <a href="avtoekspedirovaniye.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu4" />
+                          </svg>
+                        </figure>Автоэкспедирование
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="perevozka-v-teple.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu5" />
+                          </svg>
+                        </figure>Перевозка в тепле
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="Pogruzochno-razgruzochnyye-uslugi.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu6" />
+                          </svg>
+                        </figure>Погрузочно-разгрузочные услуги
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="upakovka.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu7" />
+                          </svg>
+                        </figure>Упаковка
+                      </a>
+                    </li>
+                    <li class="nav__submenu-item">
+                      <a href="perevozka-po-nakladnym.html" class="nav__submenu-link">
+                        <figure class="nav__submenu-icon-box">
+                          <svg width="37" height="23" class="nav__submenu-icon">
+                            <use xlink:href="../img/sprite-icons.svg#submenu8" />
+                          </svg>
+                        </figure>Перевозка по накладным
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="nav__submenu-images-list">
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/1.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/2.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/3.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item is-active">
+                      <img src="#" srcset="../img/components/base-nav/4.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/5.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/6.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/7.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                    <li class="nav__submenu-images-item">
+                      <img src="#" srcset="../img/components/base-nav/8.jpg" alt
+                        class="nav__submenu-images-img" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="../documents.html" class="nav__link">Документы</a>
+            </li>
+            <li class="nav__item">
+              <a href="../about.html" class="nav__link">О компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="../contacts.html" class="nav__link">Контакты и филиалы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article class="services">
+        <h1 class="title">
+          <span class="title__inner">Услуги и цены</span>
+        </h1>
+
+        <section class="services__section">
+          <h2 class="title-2">
+            <span class="title__inner">Автоэкспедирование</span>
+          </h2>
+          <p>
+            Автоэкспедирование – это услуга по довозу груза от заказчика до терминала транспортной компании или наоборот. Работает это так: вы оставляете заявку на сайте РТС или по телефону при разговоре с оператором, оплачиваете заказ. После этого на указанный адрес выезжают грузчики, которые забирают груз и все сопроводительные документы, доставляют его в пункт отправки. Или, если у получателя нет возможности забрать груз самостоятельно, доставляют его по городу от терминала до конкретного адреса.
+          </p>
+		  <p>
+            Тарифы на автоэкспедирование можно посмотреть ниже.
+          </p>
+          <figure class="services__img-box">
+            <img src="#" srcset="../img/components/services/storage/4.jpg"
+              alt class="services__img" />
+          </figure>
+
+          		<!-- Таблица -->
+<div class="table_auto">
+  <table  border=0 cellpadding=0 cellspacing=0 >
+   <col class="first_row">
+   <col class="even_row">
+   <col class="odd_row">
+   <col class="even_row">
+   <col class="odd_row">
+   <col class="even_row">
+   <col class="odd_row">
+   <col class="even_row">
+   <col class="odd_row">
+   <col class="even_row">
+   <col class="odd_auto_row">
+   <col class="even_auto_row">
+   <tr class="table_auto_header">
+    <td class="auto_empty">&nbsp;</td>
+    <td colspan=9 class="auto_head_weith">Вес/Объем</td>
+    <th rowspan=2 >Простой на погрузке / выгрузке (руб/30мин)</th>
+    <th rowspan=2 class="table_dark-blue">Пробег за город (отдаленные районы, за МКАД) (руб/км)</th>
+   </tr>
+   <tr  class="table_light-blue">
+    <th >Город</th>
+    <th class="table_dark-blue">50кг 0,3м3</th>
+    <th >100кг 0,6м3</th>
+    <th class="table_dark-blue">300кг 2м3</th>
+    <th >500кг 3м3</th>
+    <th class="table_dark-blue">1000кг 6м3</th>
+    <th >1500кг 8,5м3</th>
+    <th class="table_dark-blue">2500кг 15м3</th>
+    <th >3500кг 20м3</th>
+	<th class="table_dark-blue">4500кг 30м3</th>
+    
+   </tr>
+   <tr class="auto_tr-underline" id="tr1">
+    <td  class="auto_mob_head">Москва</td>
+    <td  data-label="50кг 0,3м3">1230</td>
+    <td  data-label="100кг 0,6м3">1330</td>
+    <td  data-label="300кг 2м3">1480</td>
+    <td  data-label="500кг 3м3">1840</td>
+    <td  data-label="1000кг 6м3">2400</td>
+    <td  data-label="1500кг 8,5м3">3170</td>
+    <td  data-label="2500кг 15м3">3950</td>
+    <td  data-label="3500кг 20м3">4800</td>
+    <td  data-label="4500кг 30м3">6800</td>
+    <td  class="auto_mob_big1">370-820</td>
+    <td  class="auto_mob_big2">20-35</td>
+   </tr>
+   <tr class="auto_tr-underline" id="tr2">
+    <td  class="auto_mob_head">Санкт- Петербург</td>
+    <td  data-label="50кг 0,3м3">1230</td>
+    <td  data-label="100кг 0,6м3">1330</td>
+    <td  data-label="300кг 2м3">1480</td>
+    <td  data-label="500кг 3м3">1840</td>
+    <td   data-label="1000кг 6м3">2400</td>
+    <td  data-label="1500кг 8,5м3">3170</td>
+    <td  data-label="2500кг 15м3">3950</td>
+    <td  data-label="3500кг 20м3">7000</td>
+    <td  data-label="4500кг 30м3">8370</td>
+    <td  class="auto_mob_big1">310-620</td>
+    <td  class="auto_mob_big2">15-20</td>
+   </tr>
+   <tr class="auto_tr-underline" id="tr3">
+    <td class="auto_mob_head">Новосибирск</td>
+    <td  data-label="50кг 0,3м3">1320</td>
+    <td  data-label="100кг 0,6м3">1430</td>
+    <td  data-label="300кг 2м3">1430</td>
+    <td  data-label="500кг 3м3">1430</td>
+    <td  data-label="1000кг 6м3">1540</td>
+    <td  data-label="1500кг 8,5м3">3080</td>
+    <td  data-label="2500кг 15м3">3080</td>
+    <td  data-label="3500кг 20м3">4180</td>
+    <td  data-label="4500кг 30м3">6050</td>
+    <td  class="auto_mob_big1">310-510</td>
+    <td  class="auto_mob_big2">15-30</td>
+   </tr>
+   <tr class="auto_tr-underline" id="tr4">
+    <td class="auto_mob_head">Иркутск</td>
+    <td  data-label="50кг 0,3м3">620</td>
+    <td  data-label="100кг 0,6м3">670</td>
+    <td  data-label="300кг 2м3">720</td>
+    <td  data-label="500кг 3м3">770</td>
+    <td  data-label="1000кг 6м3">920</td>
+    <td  data-label="1500кг 8,5м3">1530</td>
+    <td  data-label="2500кг 15м3">2660</td>
+    <td  data-label="3500кг 20м3">4080</td>
+    <td  data-label="4500кг 30м3">5610</td>
+    <td  class="auto_mob_big1">310-510</td>
+    <td  class="auto_mob_big2">15-20</td>
+   </tr>
+   <tr class="auto_tr-underline" id="tr5">
+    <td class="auto_mob_head">Красноярск</td>
+    <td  data-label="50кг 0,3м3">1200</td>
+    <td  data-label="100кг 0,6м3">1200</td>
+    <td  data-label="300кг 2м3">1200</td>
+    <td  data-label="500кг 3м3">1200</td>
+    <td  data-label="1000кг 6м3">1200</td>
+    <td  data-label="1500кг 8,5м3">1900</td>
+    <td  data-label="2500кг 15м3">2000</td>
+    <td  data-label="3500кг 20м3">2300</td>
+    <td  data-label="4500кг 30м3">4000</td>
+    <td  class="auto_mob_big1">310-510</td>
+    <td  class="auto_mob_big2">15-20</td>
+   </tr>
+   <tr height=30 id="tr6">
+    <td class="auto_mob_head">Улан-Удэ</td>
+    <td data-label="50кг 0,3м3">1200</td>
+    <td data-label="100кг 0,6м3">1200</td>
+    <td data-label="300кг 2м3">1500</td>
+    <td data-label="500кг 3м3">1500</td>
+    <td data-label="1000кг 6м3">2000</td>
+    <td data-label="1500кг 8,5м3">2000</td>
+    <td data-label="2500кг 15м3">2660</td>
+    <td data-label="3500кг 20м3">4080</td>
+    <td data-label="4500кг 30м3">5610</td>
+    <td class="auto_mob_big1">310-510</td>
+    <td class="auto_mob_big2">15-20</td>
+   </tr>
+  
+  </table>
+  </div> 
+
+
+          <!-- ТЕКСТ -->
+          <!-- <h2 class="title-2">
+            <span class="title__inner">Стоимость хранения груза на складе</span>
+          </h2>
+          <ul class="custom-list">
+            <li>Стоимость складских услуг свыше 2 рабочих дней составляет 1,10 руб/кг, 250 руб/м³ за каждый день.</li>
+            <li>Минимальная стоимость складских услуг 150 рублей.</li>
+            <li>Дата принятия груза на склад и дата выдачи считаются за один день.</li>
+            <li>
+              При хранение груза, требующего соблюдения особого температурного режима, стоимость складских услуг
+              увеличивается на 50%.
+            </li>
+          </ul>
+          <button data-modal-target="order" class="btn btn--size-medium btn--block services__calc-btn js-modal">
+            <span>РАССЧИТАТЬ СТОИМОСТЬ ДОСТАВКИ</span>
+          </button>
+        </section>
+        <div class="info info--danger">
+          <div class="info__title">Простой машины</div>
+          <p>
+            Нахождение автотранспортного средства по адресу клиента свыше
+            установленных нормативов (свыше одного часа) считается простоем. В
+            случае возникновения простоя, наша компания оставляет за собой право
+            отозвать данное транспортное средство с места заказанной загрузки
+            (выгрузки) груза, при этом, заказчику будет выставлен счет по уплате за
+            холостой прогон и простой транспортного средства.
+          </p>
+        </div>
+        <div class="info info--danger">
+          <div class="info__title">Отмена заявки</div>
+          <p>
+            Любые отмены сделанных ранее заявок возможны только в течении рабочего
+            времени подразделения нашей компании в вашем регионе (рабочие дни
+            недели, с понедельника по пятницу, с учетом праздничных дней).
+          </p>
+          <p>
+            Отмена заявки оплачивается как холостой прогон автомобиля, согласно
+            установленным тарифам, за исключением следующих случаев:
+            <br />• если отказ был принят до 17:30 в день, предшествующий исполнению
+            заявки экспедитором.
+            <br />• отказ был принят до 11:00 дня, указанного для исполнения экспедитором
+            заявки, при условии, что:
+            <br />- адрес загрузки находится в черте города;
+            <br />- автотранспорт еще не был отправлен по адресу клиента;
+            <br />- в заказе не были запрошены какие-либо специальные
+            требования к автотранспорту (такие, как верхняя или боковая загрузка,
+            гидроборт или манипулятор и проч.);
+            <br />- заказ не предполагал нестандартных погрузочно-разгрузочных
+            работы (например, превышение допустимых массогабаритных параметров для
+            одного места груза).
+          </p>
+        </div>
+        <div class="info info--danger">
+          <div class="info__title">Деление зон автодоставки</div>
+          <p>
+            Исходя из того, что к доставке и забору грузов применяется различные
+            подходы в тарификации (исходя из того, что адрес клиента располагается в
+            черте города или за ней) необходимо особо отметить, что в некоторых
+            случаях, будет некое несоответствие в административном делении города и
+            пригорода и делению, принимаемым нашей транспортной компанией.
+          </p>
+        </div> -->
+
+        <!-- Конец текста -->
+
+      </article>
+    </main>
+
+    <aside class="sidebar">
+      <div class="title sidebar__title-empty"></div>
+      <div class="sidebar__box">
+        <div class="services-nav">
+          <ul class="nav__submenu-list services-nav__list">
+            <li class="nav__submenu-item">
+              <a href="perevozka-sbornykh-gruzov.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu1" />
+                  </svg>
+                </figure>Перевозка сборных грузов
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="khraneniye-gruzov-na-sklade.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu2" />
+                  </svg>
+                </figure>Хранение груза на складе
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="perevozka-khrupkogo-gruza.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu3" />
+                  </svg>
+                </figure>Перевозка хрупкого груза
+              </a>
+            </li>
+            <li class="nav__submenu-item is-active">
+              <a href="avtoekspedirovaniye.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu4" />
+                  </svg>
+                </figure>Автоэкспедирование
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="perevozka-v-teple.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu5" />
+                  </svg>
+                </figure>Перевозка в тепле
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="Pogruzochno-razgruzochnyye-uslugi.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu6" />
+                  </svg>
+                </figure>Погрузочно-разгрузочные услуги
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="upakovka.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu7" />
+                  </svg>
+                </figure>Упаковка
+              </a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="perevozka-po-nakladnym.html" class="nav__submenu-link">
+                <figure class="nav__submenu-icon-box">
+                  <svg width="37" height="23" class="nav__submenu-icon">
+                    <use xlink:href="../img/sprite-icons.svg#submenu8" />
+                  </svg>
+                </figure>Перевозка по накладным
+              </a>
+            </li>
+          </ul>
+          <button onclick="opencalk()" class="btn btn--size-medium btn--block js-modal">
+            <span>РАССЧИТАТЬ СТОИМОСТЬ ДОСТАВКИ</span>
+          </button>
+        </div>
+        <div class="banner">
+          <p href="#" class="banner__link">
+            <img src="#" srcset="../img/components/banner/1.jpg 1x, ../img/components/banner/1@2x.jpg 2x" alt width="340"
+              height="200" class="banner__img" />
+            <div class="banner__text">
+              Бесплатная доставка по
+              <br />адресу для новых клиентов
+            </div>
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__container">
+          <section class="footer__main">
+            <h5 class="sr-only">Контакты</h5>
+            <div class="footer__main-header">
+              <figure class="logo">
+                <a href="/" title="Транспортная компания РТС" class="logo__link">
+                  <img src="#" srcset="../img/components/logo/logo_small.png 1x, ../img/components/logo/logo_small@2x.png 2x"
+                    width="96" height="53" alt="Логотип Транспортной компании РТС" class="logo__img" />
+                </a>
+              </figure>
+              <div class="footer__main-contacts">
+                <a href="tel:88001004979" class="footer__tel-link">8-800-100-4979</a>
+                <br />
+                <a href="mailto:info@rustc.biz" class="footer__email-link">info@rustc.biz</a>
+              </div>
+            </div>
+            <div class="footer__addresses">
+              <section class="footer__address">
+                <h6 class="footer__address-title">Санкт-Петербург</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:88129224342" class="footer__tel-link">+7 (812) 922-43-42</a>
+                  </li>
+                  <li class="footer__address-phone">
+                    <a href="tel:88129225432" class="footer__tel-link">+7 (812) 922-54-32</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Калинина 57</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 19:00)
+                  <br />Сб (9:00 - 14:00)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Москва</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+84993439471" class="footer__tel-link">+7 (499) 343-94-71</a>
+                  </li>
+                 
+                </ul>
+                <div class="footer__address-street">
+                    Ярославское шоссе, Северянинский проезд, влад 3.
+                </div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Новосибирск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+79835106887" class="footer__tel-link">+7 (983) 510-68-87</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Писарева д.121, склад 14</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Красноярск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+79835081202" class="footer__tel-link">+7 (983) 508-12-02</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">Северное шоссе, 11</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Иркутск</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+78001004879" class="footer__tel-link">+7 (800) 100-49-79</a>
+                  </li>
+                  <li class="footer__address-phone">
+                    <a href="tel:+79086632030" class="footer__tel-link">+7 (908) 663-20-30</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Касьянова д.26, оф.2,3,4</div>
+                <div class="footer__address-street">ул. Иркутная 2 стр. 17 </div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+
+              <section class="footer__address">
+                <h6 class="footer__address-title">Улан-Удэ</h6>
+                <ul class="footer__address-phones">
+                  <li class="footer__address-phone">
+                    <a href="tel:+73012204117" class="footer__tel-link">+7 (3012) 204-117</a>
+                  </li>
+                </ul>
+                <div class="footer__address-street">ул. Комарова, 122</div>
+                <div class="footer__address-hours">
+                  Пн - Пт (9:00 - 18:00)
+                  <br />Сб - Вс (Выходной)
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <aside class="footer__nav">
+            <h5 class="sr-only">Навигация по сайту</h5>
+            <ul class="footer__nav-list">
+              <li>
+                <a href="../index.html" class="footer__nav-link">Главная</a>
+              </li>
+              <li>
+                <a href="../services.html" class="footer__nav-link">Услуги и цены</a>
+              </li>
+              <li>
+                <a href="../documents.html" class="footer__nav-link">Документы</a>
+              </li>
+              <li>
+                <a href="../about.html" class="footer__nav-link">О компании</a>
+              </li>
+              <li>
+                <a href="../contacts.html" class="footer__nav-link">Контакты и филиалы</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__copyright">
+              © «РТС» 2019 г. Все права защищены. Информация сайта защищена
+              законом об авторских правах. Сайт не является публичной офертой.
+            </div>
+            <div class="footer__designed">
+              Разработка –
+              <a href target="_blank">TOPSITE STUDIO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="top-btn js-top-btn">
+      <svg width="50" height="80">
+        <use xlink:href="../img/sprite-icons.svg#top" />
+      </svg>
+    </button>
+
+    <div tabindex="-1" role="dialog" data-modal="routes" class="modal">
+      <div class="modal__overlay"></div>
+      <button title="Закрыть" aria-label="Закрыть" class="modal__close-btn js-modal-close">
+        <svg width="30" height="30">
+          <use xlink:href="../img/sprite-icons.svg#close" />
+        </svg>
+      </button>
+      <div class="modal__content">
+        <div class="modal-routes">
+          <ul class="modal-routes__list js-routes">
+            <li data-route-point1="spb" data-route-point2="nvsbk" data-route-length="5200" data-route-dates="6-7"
+              class="modal-routes__item">Санкт-Петербург - Новосибирск</li>
+            <li data-route-point1="spb" data-route-point2="krsnk" data-route-length="6200" data-route-dates="7-8"
+              class="modal-routes__item">Санкт-Петербург - Красноярск</li>
+            <li data-route-point1="spb" data-route-point2="irksk" data-route-length="6700" data-route-dates="8-9"
+              class="modal-routes__item">Санкт-Петербург - Иркутск</li>
+            <li data-route-point1="spb" data-route-point2="ulud" data-route-length="7200" data-route-dates="9-10"
+              class="modal-routes__item">Санкт-Петербург - Улан-Удэ</li>
+            <li data-route-point1="msc" data-route-point2="nvsbk" data-route-length="5200" data-route-dates="6-7"
+              class="modal-routes__item">Москва - Новосибирск</li>
+            <li data-route-point1="msc" data-route-point2="krsnk" data-route-length="5800" data-route-dates="7-8"
+              class="modal-routes__item">Москва - Красноярск</li>
+            <li data-route-point1="msc" data-route-point2="irksk" data-route-length="6200" data-route-dates="6"
+              class="modal-routes__item">Москва - Иркутск</li>
+            <li data-route-point1="msc" data-route-point2="ulud" data-route-length="8200" data-route-dates="7"
+              class="modal-routes__item">Москва - Улан-Удэ</li>
+            <li data-route-point1="nvsbk" data-route-point2="krsnk" data-route-length="5200" data-route-dates="7"
+              class="modal-routes__item">Новосибирск - Красноярск</li>
+            <li data-route-point1="nvsbk" data-route-point2="irksk" data-route-length="5900" data-route-dates="6"
+              class="modal-routes__item">Новосибирск - Иркутск</li>
+            <li data-route-point1="nvsbk" data-route-point2="ulud" data-route-length="6200" data-route-dates="8"
+              class="modal-routes__item">Новосибирск - Улан-Удэ</li>
+            <li data-route-point1="irksk" data-route-point2="ulud" data-route-length="7200" data-route-dates="9"
+              class="modal-routes__item">Иркутск - Улан-Удэ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Модальное окно калькулятора -->
+<div tabindex="-1" role="dialog" id="modal_okno_calk" class="modal">
+  <div class="modal__overlay"></div>
+  <button title="Закрыть" aria-label="Закрыть" class="modal__close-btn js-modal-close" onclick="closecalk()" style="z-index: 9;">
+    <svg width="30" height="30"><use xlink:href="../img/sprite-icons.svg#close" /></svg>
+  </button>
+  <div class="modal__content" style="width: 100%; height: 100%; margin-top: 35%;  padding-top: 100px;">
+   
+    <!-- Калькулятор -->
+    <div class="container">
+        <form action="action.php" id="modal_okno_content_calk" class="form42">
+          <section class="form42__main">
+            <div class="form42__title" id="calculator">Укажите детали доставки</div>
+            <div class="form42__title2">Маршрут и данные о грузе</div>
+            <div class="form42__line">
+              <div class="form42__row">
+                <label class="form42__point1">
+                  <span class="form42__label">
+                    Откуда
+                    <mark>*</mark>
+                  </span>
+                  <select id="otkuda">
+                    <option value="placeholder">Откуда</option>
+                    <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option>
+                    <option value="3">Новосибирск</option>
+                    <option value="4">Красноярск</option>
+                    <option value="5">Иркутск</option>
+                    <!-- <option value="6">Улан-Удэ</option> -->
+                  </select>
+                  <svg class="treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+                  </svg>
+                </label>
+              </div>
+              <div class="form42__row">
+                <label class="form42__point2">
+                  <span class="form42__label">
+                    Куда
+                    <mark>*</mark>
+                  </span>
+                  <select id="kuda">
+                    <option value="placeholder">Куда</option>
+                    <!-- <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option> -->
+                    <option value="3">Новосибирск</option>
+                    <option value="4">Красноярск</option>
+                    <option value="5">Иркутск</option>
+                    <div id="k6"><option value="6">Улан-Удэ</option></div>
+                  </select>
+                  <svg class="treug" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"/>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="form42__line form42__line--special">
+              <label class="form42__row form42__row--half" style="margin-right: 4.5%;">
+                <span class="form42__label">
+                  Объем
+                  <mark>*</mark>
+                </span>
+                <input type="text" id="obyom" placeholder="м3" class="text-center" />
+              </label>
+              <label class="form42__row form42__row--half" style="margin-right: auto; ">
+                <span class="form42__label">
+                  Вес
+                  <mark>*</mark>
+                </span>
+                <input type="text" id="massa" placeholder="кг" class="text-center" />
+              </label>
+            </div>
+          </section>
+
+          <section class="form42__result">
+            <div class="form42__title2">Расчёт</div>
+            <div class="form42__result-price">
+              <span id="rez">0</span>
+              руб.
+            </div>
+            <div class="form42__result-price-info">ориентировочная стоимость доставки</div>
+            <div class="form42__result-bottom">
+                <button onclick="closecalk(), open_modal()" class="btn header__order-btn js-modal">
+                    <span>ОФОРМИТЬ ЗАЯВКУ</span>
+                  </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+</div>
+
+
+<!-- Модальное окно оформления заявки -->
+<div tabindex="-1" role="dialog" id="modal_okno" class="modal">
+      <div class="modal__overlay"></div>
+
+      <button title="Закрыть" aria-label="Закрыть" class="modal__close-btn js-modal-close" onclick="close_modal()" style="z-index: 9;">
+        <svg width="30" height="30"><use xlink:href="../img/sprite-icons.svg#close" /></svg>
+      </button>
+
+      <div class="modal__content" style="width: 100%;">
+      
+        
+        <div class="modal-order">
+          <form action="form.php" method="post" class="form42" id="modal_okno_content" style="margin: 0 auto;">
+            <section class="form42__main">
+              <div class="form42__title">Укажите детали доставки</div>
+              <div class="form42__title2">Маршрут и данные о грузе</div>
+              <div class="form42__line">
+                <div class="form42__row">
+                  <label class="form42__point1">
+                    <span class="form42__label">
+                      Откуда
+                      <mark>*</mark>
+
+                        
+                    </span>
+
+                    <input id="otkudIn" name="otkud" >
+                    <select id="otkudamd"  >                
+                      <option value="placeholder">Откуда</option>
+                      <option value="1">Москва</option>
+                      <option value="2">Санкт-Петербург</option>
+                      <option value="3">Новосибирск</option>
+                      <option value="4">Красноярск</option>
+                      <option value="5">Иркутск</option>
+                    </select>
+
+                    <svg class="treug" style="z-index: 7;" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                    </svg>
+                  </label>
+                </div>
+                <div class="form42__row">
+                  <label class="form42__point2">
+                    <span class="form42__label">
+                      Куда
+                      <mark>*</mark>
+                    </span>
+                    <input id="kudIn" name="kud" >
+                    <div id='hide_md'>
+                      <select  id="kudamd">
+                        <option value="placeholder">Куда</option>
+                        <option value="3">Новосибирск</option>
+                        <option value="4">Красноярск</option>
+                        <option value="5">Иркутск</option>
+                        <option value="6">Улан-Удэ</option>
+                      </select>
+                  </div>
+                  
+                  <svg class="treug" style="z-index: 5;" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.01222 0.555024C8.01825 0.415341 7.96926 0.278862 7.87578 0.174902C7.78229 0.0709424 7.65175 0.00779507 7.51222 -0.000976562H0.512217C0.372679 0.00779507 0.242147 0.0709424 0.148658 0.174902C0.0551693 0.278862 0.0061815 0.415341 0.012217 0.555024C0.0116103 0.699155 0.0643242 0.838419 0.160217 0.946023L3.66022 4.83502C3.70398 4.88566 3.75798 4.92646 3.81865 4.95473C3.87932 4.98299 3.94529 4.99809 4.01222 4.99902C4.07922 4.99796 4.14524 4.98271 4.20591 4.95427C4.26659 4.92583 4.32054 4.88485 4.36422 4.83402L7.86422 0.945024C7.95988 0.837676 8.01258 0.69881 8.01222 0.555024Z" fill="#264C80"></path>
+                  </svg>
+                  </label>
+                </div>
+              </div>
+
+
+                  <!-- Место -->
+                  <div id="mesto_all">
+                  <!-- 1 Место -->
+                  <fieldset class="form42__contacts-set" id="mesto1">
+                                  <legend class="form42__contacts-title">Место 1</legend>
+                                  <!-- <legend class="form42__contacts-title delete" onClick="del1()" id="delete_mesto1">&#10006;</legend> -->
+                                  <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                                      <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                                          <div class="perekl1">
+                                              <div class="touch1"></div>
+                                          </div>
+                                          <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                                          font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                              <span class="obtext1">Ввод по объёму</span><br>
+                                              <span class="gabtext1 none_active_text"> Ввод по габаритам</span>
+                                          </span>
+                                        </label>
+                  
+                                    <label class="obyom1 form42__row form42__row--half" style="width: 139px; ">
+                                      <span class="form42__label">
+                                        Объем
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="number" min="0" name="obom1" placeholder="м3" class="text-center raz" />
+                                      <p class="obsh">Общий объём:<span id="ob1"></span> м<sup>3</sup></p>
+                                    </label>
+
+                                    <label class="gabar1 form42__row form42__row--half" style="width: 139px;display: none;">
+                                      <span class="form42__label">
+                                        Габариты (д, ш, в)
+                                        <mark>*</mark>
+                                        
+                                      </span>
+                                    
+                                      <input type="number" min='0' name="gab1" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                                      <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                                      <input type="number" min='0' name="gab2" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                                      <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                                      <input type="number" min='0' name="gab3" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                                    <p class="obsh">Общий объём:<span id="ob11"></span> м<sup>3</sup></p>
+                                    </label>
+
+
+                                    <label class="form42__row form42__row--half" style="width: 139px">
+                                      <span class="form42__label">
+                                        Вес
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="number" name="ves1" placeholder="кг" class="text-center raz" />
+                                      <p class="obsh">Общий вес:<span id="ov1"></span> кг</p>
+                                    </label>
+                                    <div class="form42__row" style="width: 160px">
+                                      <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                                        <span class="form42__label">
+                                          Одинаковые места
+                                          <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+
+                                        </span>
+                                        <div>
+                                          <div class="min-btn" id="min_odin1"><b>-</b></div>
+                                          <input type="number" name="om1" value="1" id="odin_mest1" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                                          <div class="min-btn" id="max_odin1"><b>+</b></div>
+                                      </div>
+                                      </label>
+                                    </div>
+
+                                    <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                                      <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                                        Наименование, характер груза
+                                        <mark>*</mark>
+                                      </span>
+                                      <input type="text" name="desc1" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                                    </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 2 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto2">
+                      <legend class="form42__contacts-title">Место 2</legend>
+                      <legend class="form42__contacts-title delete" onClick="del2()" id="delete_mesto2">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl2">
+                                  <div class="touch2"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext2">Ввод по объёму</span><br>
+                                  <span class="gabtext2 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom2 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob2"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar2 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob21"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov2"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin2"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest2" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin2"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 3 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto3">
+                    <legend class="form42__contacts-title">Место 3</legend>
+                    <legend class="form42__contacts-title delete" onClick="del3()" id="delete_mesto3">&#10006;</legend>
+                    <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                        <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                            <div class="perekl3">
+                                <div class="touch3"></div>
+                            </div>
+                            <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                            font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                <span class="obtext3">Ввод по объёму</span><br>
+                                <span class="gabtext3 none_active_text"> Ввод по габаритам</span>
+                            </span>
+                          </label>
+
+                      <label class="obyom3 form42__row form42__row--half" style="width: 139px; ">
+                        <span class="form42__label">
+                          Объем
+                          <mark>*</mark>
+                        </span>
+                        <input type="number" placeholder="м3" class="text-center raz" />
+                        <p class="obsh">Общий объём:<span id="ob3"></span> м<sup>3</sup></p>
+                      </label>
+
+                      <label class="gabar3 form42__row form42__row--half" style="width: 139px;display: none;">
+                        <span class="form42__label">
+                          Габариты (д, ш, в)
+                          <mark>*</mark>
+                          
+                        </span>
+                      
+                        <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                        <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                        <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                        <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                      <p class="obsh">Общий объём:<span id="ob31"></span> м<sup>3</sup></p>
+                      </label>
+
+
+                      <label class="form42__row form42__row--half" style="width: 139px">
+                        <span class="form42__label">
+                          Вес
+                          <mark>*</mark>
+                        </span>
+                        <input type="number" placeholder="кг" class="text-center raz" />
+                        <p class="obsh">Общий вес:<span id="ov3"></span> кг</p>
+                      </label>
+                      <div class="form42__row" style="width: 160px">
+                        <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                          <span class="form42__label">
+                            Одинаковые места
+                                                    <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                          </span>
+                          <div class="min-btn" id="min_odin3"><b>-</b></div>
+                          <input type="number" value="1" id="odin_mest3" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                          <div class="min-btn" id="max_odin3"><b>+</b></div>
+                        </label>
+                      </div>
+
+                      <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                        <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                          Наименование, характер груза
+                          <mark>*</mark>
+                        </span>
+                        <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                      </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 4 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto4">
+                      <legend class="form42__contacts-title">Место 4</legend>
+                      <legend class="form42__contacts-title delete" onClick="del4()" id="delete_mesto4">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl4">
+                                  <div class="touch4"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext4">Ввод по объёму</span><br>
+                                  <span class="gabtext4 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom4 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob4"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar4 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob41"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov4"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin4"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest4" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin4"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 5 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto5">
+                      <legend class="form42__contacts-title">Место 5</legend>
+                      <legend class="form42__contacts-title delete" onClick="del5()" id="delete_mesto5">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl5">
+                                  <div class="touch5"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext5">Ввод по объёму</span><br>
+                                  <span class="gabtext5 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom5 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob5"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar5 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob51"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov5"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin5"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest5" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin5"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 6 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto6">
+                      <legend class="form42__contacts-title">Место 6</legend>
+                      <legend class="form42__contacts-title delete" onClick="del6()" id="delete_mesto6">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl6">
+                                  <div class="touch6"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext6">Ввод по объёму</span><br>
+                                  <span class="gabtext6 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom6 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob6"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar6 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob61"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov6"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin6"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest6" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin6"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 7 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto7">
+                      <legend class="form42__contacts-title">Место 7</legend>
+                      <legend class="form42__contacts-title delete" onClick="del7()" id="delete_mesto7">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl7">
+                                  <div class="touch7"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext7">Ввод по объёму</span><br>
+                                  <span class="gabtext7 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom7 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob7"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar7 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob71"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov7"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin7"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest7" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin7"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 8 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto8">
+                      <legend class="form42__contacts-title">Место 8</legend>
+                      <legend class="form42__contacts-title delete" onClick="del8()" id="delete_mesto8">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl8">
+                                  <div class="touch8"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext8">Ввод по объёму</span><br>
+                                  <span class="gabtext8 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom8 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob8"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar8 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob81"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ob8"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin8"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest8" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin8"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 9 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto9">
+                      <legend class="form42__contacts-title">Место 9</legend>
+                      <legend class="form42__contacts-title delete" onClick="del9()" id="delete_mesto9">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl9">
+                                  <div class="touch9"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext9">Ввод по объёму</span><br>
+                                  <span class="gabtext9 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom9 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob9"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar9 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob91"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov9"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                                                      <span class="form42__info-sign">
+                                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                                            </span>
+                            </span>
+                            <div class="min-btn" id="min_odin9"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest9" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin9"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+
+                  <!-- 10 Место -->
+                  <fieldset class="form42__contacts-set hide" id="mesto10">
+                      <legend class="form42__contacts-title">Место 10</legend>
+                      <legend class="form42__contacts-title delete" onClick="del10()" id="delete_mesto10">&#10006;</legend>
+                      <div class="form42__line form42__line--special" style="margin-top: -3%;">
+                          <label class="form42__row form42__row--half" style="width:161px; margin-top: 4%;">
+                              <div class="perekl10">
+                                  <div class="touch10"></div>
+                              </div>
+                              <span class="form42__label"  style="display:inline-block;font-family: Segoe UI;
+                              font-style: normal; font-weight: 300;  font-size: 16px;  line-height: 21px; vertical-align: bottom;">
+                                  <span class="obtext10">Ввод по объёму</span><br>
+                                  <span class="gabtext10 none_active_text"> Ввод по габаритам</span>
+                              </span>
+                            </label>
+
+                        <label class="obyom10 form42__row form42__row--half" style="width: 139px; ">
+                          <span class="form42__label">
+                            Объем
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="м3" class="text-center raz" />
+                          <p class="obsh">Общий объём:<span id="ob10"></span> м<sup>3</sup></p>
+                        </label>
+
+                        <label class="gabar10 form42__row form42__row--half" style="width: 139px;display: none;">
+                          <span class="form42__label">
+                            Габариты (д, ш, в)
+                            <mark>*</mark>
+                            
+                          </span>
+                        
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;z-index: 3;" />
+                          <span style="position: absolute;margin: 10px -4px;z-index: 4;">х</span>
+                          <input type="number" placeholder="м" class="text-center raz none" style="display: inline-block;width:48px;padding:0;margin: 0 -6px 0 0;"/>
+                        <p class="obsh">Общий объём:<span id="ob101"></span> м<sup>3</sup></p>
+                        </label>
+
+
+                        <label class="form42__row form42__row--half" style="width: 139px">
+                          <span class="form42__label">
+                            Вес
+                            <mark>*</mark>
+                          </span>
+                          <input type="number" placeholder="кг" class="text-center raz" />
+                          <p class="obsh">Общий вес:<span id="ov10"></span> кг</p>
+                        </label>
+                        <div class="form42__row" style="width: 160px">
+                          <label class="form42__row form42__row--half" style="white-space: nowrap;">
+                            <span class="form42__label">
+                              Одинаковые места
+                              <span class="form42__info-sign">
+                              <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                              <div class="steps__tip podskaz" style="margin: -11% -5%; width: 55%;">Если все места имеют одинаковый вес, объем или <br>габариты – укажите количество мест здесь.</div>
+                              </span>
+                            </span>
+                            <div class="min-btn" id="min_odin10"><b>-</b></div>
+                            <input type="number" value="1" id="odin_mest10" class="text-center raz" style="width:78px;  display: inline-block; vertical-align: bottom;"/>
+                            <div class="min-btn" id="max_odin10"><b>+</b></div>
+                          </label>
+                        </div>
+
+                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 0;">
+                          <span class="form42__label" style="font-size: 16px; line-height: 19px;">
+                            Наименование, характер груза
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" placeholder="Описание груза (например: мебель, оргтехника)" style="font-size: 16px;" />
+                        </label>
+                  </div>
+                  </fieldset>
+                  </div>
+                  <p id="add_mesto" class="add_el" onclick="addmesto()">+ Добавить грузовое место</p>
+
+
+                  <p class="dop_uslov">Дополнительные условия</p>
+
+                  <!-- 1 строка -->
+                  <div class="row">
+                                
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="obresh"/>
+                                        <span class="form42__checkbox-label">
+                                          Требуется обрешетка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Упаковка груза в жесткий деревянный решетчатый ящик.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="zagruz" />
+                                        <span class="form42__checkbox-label">
+                                          Требуется загрузка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Услуги грузчиков и специального оборудования при получении груза.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                                  
+                  </div>
+
+                  <!-- 2 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="naklad" />
+                                        <span class="form42__checkbox-label">
+                                          Прием и выдача по накладным
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Cоставление подробного описания груза при приеме и проверка соответствия при выдаче.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="vygruz" />
+                                        <span class="form42__checkbox-label">
+                                          Требуется выгрузка груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Услуги грузчиков и специального оборудования при выдаче груза.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                  </div>
+
+                  <!-- 3 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="teplo" />
+                                        <span class="form42__checkbox-label">
+                                          Перевозка в тепле
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Требуется при перевозке продуктов, бытовой химии, медикаментов, животных и растений.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="hrup" />
+                                        <span class="form42__checkbox-label">
+                                          Перевозка хрупкого груза
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Требуется при перевозке электроники и бытовой техники, изделий из стекла, фарфора и керамики.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                    </div>
+                  </div>
+
+                  <!-- 4 строка -->
+                  <div class="row">
+                                    <div class="form42__row col-lg-6">
+                                      <label class="form42__checkbox">
+                                        <input type="checkbox" name="autoot"  id="hider1" />
+                                        <span class="form42__checkbox-label hide1">
+                                          Автоэкспедирование от адреса
+                                          <span class="form42__info-sign">
+                                            <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                            <div class="steps__tip podskaz">Доставка груза по городу от адреса заказчика до терминала компании.</div>
+                                          </span>
+                                        </span>
+                                      </label>
+                                  
+
+                              
+                                    <div id="zabrat" style="margin-top: 15px;  border: 1px solid blue;     border-radius: 5px;   padding: 20px; display: none;">
+                                        <label class="form42__row form42__row--half" style="width: 100%">
+                                          <span class="form42__label">  Забрать по адресу   </span>
+                                          <input type="text" name="adresot" placeholder="" class="text-center" />
+                                        </label>
+                                        <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 10px;">
+                                          <span class="form42__label">  Когда забрать груз?   </span>
+
+                                          <input type="text" id="datecalend" placeholder="дд.мм.гггг" name="dayin">
+                                          <svg class="treug_moda_kek" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.53889 18.5708V15.3577H5V18.5719L1.53889 18.5708ZM5.77 18.5708V15.3577H9.61556V18.5719L5.77 18.5708ZM1.53889 14.643V11.072H5V14.643H1.53889ZM5.77 14.643V11.072H9.61556V14.643H5.77ZM1.53889 10.3585V7.14424H5V10.3585H1.53889ZM10.3856 18.5677V15.3577H14.2322V18.5719L10.3856 18.5677ZM5.77 10.3585V7.14424H9.61556V10.3585H5.77ZM15.0011 18.5677V15.3577H18.4622V18.5719L15.0011 18.5677ZM10.3844 14.643V11.072H14.2311V14.643H10.3844ZM6.15333 5.00142C6.14965 5.0962 6.10773 5.18604 6.0362 5.25241C5.96468 5.31879 5.86901 5.35665 5.76889 5.35821H5C4.89988 5.35665 4.80421 5.31879 4.73269 5.25241C4.66116 5.18604 4.61924 5.0962 4.61556 5.00142V1.7872C4.61924 1.69242 4.66116 1.60259 4.73269 1.53621C4.80421 1.46983 4.89988 1.43197 5 1.43042H5.76889C5.86901 1.43197 5.96468 1.46983 6.0362 1.53621C6.10773 1.60259 6.14965 1.69242 6.15333 1.7872V5.00142ZM15 14.643V11.072H18.4611V14.643H15ZM10.3844 10.3585V7.14424H14.2311V10.3585H10.3844ZM15 10.3585V7.14424H18.4611V10.3585H15ZM15.3844 5.00248C15.3808 5.09726 15.3388 5.18709 15.2673 5.25346C15.1958 5.31984 15.1001 5.35771 15 5.35926H14.2311C14.131 5.35771 14.0353 5.31984 13.9638 5.25346C13.8923 5.18709 13.8504 5.09726 13.8467 5.00248V1.78825C13.8504 1.69347 13.8923 1.60364 13.9638 1.53726C14.0353 1.47089 14.131 1.43302 14.2311 1.43147H15C15.1001 1.43302 15.1958 1.47089 15.2673 1.53726C15.3388 1.60364 15.3808 1.69347 15.3844 1.78825V5.00248ZM20 4.28785C19.993 3.90604 19.8276 3.54217 19.5397 3.27492C19.2517 3.00767 18.8643 2.8585 18.4611 2.85966H16.9233V1.78825C16.9178 1.30971 16.7122 0.852747 16.3518 0.517415C15.9913 0.182082 15.5052 -0.00430159 15 -0.000931647H14.2311C13.7259 -0.00430159 13.2398 0.182082 12.8793 0.517415C12.5189 0.852747 12.3133 1.30971 12.3078 1.78825V2.85966H7.69222V1.78825C7.68665 1.30971 7.48113 0.852747 7.12066 0.517415C6.76018 0.182082 6.27412 -0.00430159 5.76889 -0.000931647H5C4.49477 -0.00430159 4.00871 0.182082 3.64823 0.517415C3.28776 0.852747 3.08224 1.30971 3.07667 1.78825V2.85966H1.53889C1.13574 2.8585 0.7483 3.00767 0.460332 3.27492C0.172365 3.54217 0.00700439 3.90604 0 4.28785L0 18.5708C0.00700439 18.9526 0.172365 19.3165 0.460332 19.5838C0.7483 19.851 1.13574 20.0002 1.53889 19.999H18.4611C18.8643 20.0002 19.2517 19.851 19.5397 19.5838C19.8276 19.3165 19.993 18.9526 20 18.5708V4.28785Z" fill="#264C80"/>
+                                            </svg>
+                                          с
+                                          <input type="number" min="0" max="24" name="otime"  id="time_auto1" style="margin-right: 10px; padding: 7px;"> до
+                                          <input type="number" min="0" max="24" name="dtime"  id="time_auto2" style="padding: 7px;">
+                                        </label>
+                                      </div>
+                                      </div>
+                              
+                            
+                                      
+                                  <div class="form42__row col-lg-6" >
+                                    <label class="form42__checkbox">
+                                      <input type="checkbox" name="autodo" id="hider2"/>
+                                      <span class="form42__checkbox-label hide2">
+                                        Автоэкспедирование до адреса
+                                        <span class="form42__info-sign">
+                                          <svg width="21" height="21"><use xlink:href="../img/sprite-icons.svg#info" /></svg>
+                                          <div class="steps__tip podskaz">Доставка груза по городу от терминала компании до адреса получателя.</div>
+                                        </span>
+                                      </span>
+                                    </label>
+                    
+                                    <div id="otdat" style="margin-top: 15px;  border: 1px solid blue;     border-radius: 5px;   padding: 20px; display: none;">
+                                    <label class="form42__row form42__row--half" style="width: 100%" >
+                                      <span class="form42__label">  Доставить по адресу   </span>
+                                      <input type="text" name="adresdo" placeholder="" class="text-center"/>
+                                    </label>
+                                    <label class="form42__row form42__row--half" style="width: 100%; margin-bottom: 10px;">
+                                      <span class="form42__label">  Когда доставить груз?   </span>
+
+                                        <div>
+                                      <input type="text" id="datecalendout" placeholder="дд.мм.гггг" class="calend" name="dayout">
+                                      <svg class="treug_moda_kek" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.53889 18.5708V15.3577H5V18.5719L1.53889 18.5708ZM5.77 18.5708V15.3577H9.61556V18.5719L5.77 18.5708ZM1.53889 14.643V11.072H5V14.643H1.53889ZM5.77 14.643V11.072H9.61556V14.643H5.77ZM1.53889 10.3585V7.14424H5V10.3585H1.53889ZM10.3856 18.5677V15.3577H14.2322V18.5719L10.3856 18.5677ZM5.77 10.3585V7.14424H9.61556V10.3585H5.77ZM15.0011 18.5677V15.3577H18.4622V18.5719L15.0011 18.5677ZM10.3844 14.643V11.072H14.2311V14.643H10.3844ZM6.15333 5.00142C6.14965 5.0962 6.10773 5.18604 6.0362 5.25241C5.96468 5.31879 5.86901 5.35665 5.76889 5.35821H5C4.89988 5.35665 4.80421 5.31879 4.73269 5.25241C4.66116 5.18604 4.61924 5.0962 4.61556 5.00142V1.7872C4.61924 1.69242 4.66116 1.60259 4.73269 1.53621C4.80421 1.46983 4.89988 1.43197 5 1.43042H5.76889C5.86901 1.43197 5.96468 1.46983 6.0362 1.53621C6.10773 1.60259 6.14965 1.69242 6.15333 1.7872V5.00142ZM15 14.643V11.072H18.4611V14.643H15ZM10.3844 10.3585V7.14424H14.2311V10.3585H10.3844ZM15 10.3585V7.14424H18.4611V10.3585H15ZM15.3844 5.00248C15.3808 5.09726 15.3388 5.18709 15.2673 5.25346C15.1958 5.31984 15.1001 5.35771 15 5.35926H14.2311C14.131 5.35771 14.0353 5.31984 13.9638 5.25346C13.8923 5.18709 13.8504 5.09726 13.8467 5.00248V1.78825C13.8504 1.69347 13.8923 1.60364 13.9638 1.53726C14.0353 1.47089 14.131 1.43302 14.2311 1.43147H15C15.1001 1.43302 15.1958 1.47089 15.2673 1.53726C15.3388 1.60364 15.3808 1.69347 15.3844 1.78825V5.00248ZM20 4.28785C19.993 3.90604 19.8276 3.54217 19.5397 3.27492C19.2517 3.00767 18.8643 2.8585 18.4611 2.85966H16.9233V1.78825C16.9178 1.30971 16.7122 0.852747 16.3518 0.517415C15.9913 0.182082 15.5052 -0.00430159 15 -0.000931647H14.2311C13.7259 -0.00430159 13.2398 0.182082 12.8793 0.517415C12.5189 0.852747 12.3133 1.30971 12.3078 1.78825V2.85966H7.69222V1.78825C7.68665 1.30971 7.48113 0.852747 7.12066 0.517415C6.76018 0.182082 6.27412 -0.00430159 5.76889 -0.000931647H5C4.49477 -0.00430159 4.00871 0.182082 3.64823 0.517415C3.28776 0.852747 3.08224 1.30971 3.07667 1.78825V2.85966H1.53889C1.13574 2.8585 0.7483 3.00767 0.460332 3.27492C0.172365 3.54217 0.00700439 3.90604 0 4.28785L0 18.5708C0.00700439 18.9526 0.172365 19.3165 0.460332 19.5838C0.7483 19.851 1.13574 20.0002 1.53889 19.999H18.4611C18.8643 20.0002 19.2517 19.851 19.5397 19.5838C19.8276 19.3165 19.993 18.9526 20 18.5708V4.28785Z" fill="#264C80"/>
+                                        </svg>
+                                      с
+                                      <input type="number" min="0" max="24"  name="otime1" id="time_auto3" style="margin-right: 9px; padding: 7px;"> до
+                                      <input type="number" min="0" max="24"  name="dtime1" id="time_auto4" style="padding: 7px;">
+                                    </div>
+                                    </label>
+                                  </div>
+                                  </div>
+                  </div>
+
+                  <p class="form42__title2" style="border-top:2px solid #264c80; padding-top: 4%;">Контактные данные</p>
+                                  
+                    <fieldset class="form42__contacts-set">
+                      <legend class="form42__contacts-title">Отправитель</legend>
+                      <div class="form42__line">
+                        <div class="form42__row form42__row--third" id="fiz_person">
+                          <label class="form42__checkbox">
+                            <input name="legal-type0" type="radio" checked="checked" />
+                            <span class="form42__checkbox-label" id="fiz_men_title">Физическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third" id="ur_person">
+                          <label class="form42__checkbox">
+                            <input name="legal-type0" type="radio" />
+                            <span class="form42__checkbox-label none_active_text" id="ur_men_title">Юридическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third"></div>
+                      </div>
+
+
+                      <div class="form42__line colonka" id="fiz_men">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Фамилия
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="ofamily" placeholder="Фамилия отправителя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Имя
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="oname" placeholder="Имя отправителя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Отчество</span>
+                          <input type="text" name="ootche" placeholder="Отчество отправителя" />
+                        </label>
+                      </div>
+
+                      <div class="form42__line none_block" id="ur_men">
+                          <label class="form42__row ur_inp">
+                            <span class="form42__label">
+                              Наименование организации
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="oorg" placeholder="Наименование"  />
+                          </label>
+                          <label class="form42__row ur_inp" style="margin-top: auto;">
+                            <span class="form42__label">
+                              Контактное лицо
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="oorgname" placeholder="Имя отправителя"/>
+                          </label>
+                        </div>
+                      
+
+                      <div class="form42__line">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Телефон
+                            <mark>*</mark>
+                          </span>
+                          <input type="tel" name="otel" placeholder="Телефон отправителя" required="required" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">E-mail</span>
+                          <input type="email"  name="omail" placeholder="E-mail отправителя" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Город</span>
+                          <input type="text" name="ogor" placeholder="Город отправителя" />
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form42__contacts-set">
+
+                      <legend class="form42__contacts-title">Получатель</legend>
+                      <div class="form42__line">
+                        <div class="form42__row form42__row--third" id="fiz_person1">
+                          <label class="form42__checkbox">
+                            <input name="legal-type1" type="radio" checked="checked" />
+                            <span class="form42__checkbox-label" id="fiz_men_title1">Физическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third" id="ur_person1">
+                          <label class="form42__checkbox">
+                            <input name="legal-type1" type="radio" />
+                            <span class="form42__checkbox-label none_active_text" id="ur_men_title1">Юридическое лицо</span>
+                          </label>
+                        </div>
+                        <div class="form42__row form42__row--third"></div>
+                      </div>
+                      <div class="form42__line colonka" id="fiz_men1">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Фамилия
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="dfamily" placeholder="Фамилия получателя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Имя
+                            <mark>*</mark>
+                          </span>
+                          <input type="text" name="dname" placeholder="Имя получателя" required="required"/>
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Отчество</span>
+                          <input type="text" name="dotche" placeholder="Отчество получателя" />
+                        </label>
+                      </div>
+
+                      <div class="form42__line none_block" id="ur_men1">
+                          <label class="form42__row ur_inp">
+                            <span class="form42__label">
+                              Наименование организации
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="dorg" placeholder="Наименование"/>
+                          </label>
+                          <label class="form42__row ur_inp" style="margin-top: auto;">
+                            <span class="form42__label">
+                              Контактное лицо
+                              <mark>*</mark>
+                            </span>
+                            <input type="text" name="dorgname" placeholder="Имя отправителя"/>
+                          </label>
+                        </div>
+
+                      <div class="form42__line">
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">
+                            Телефон
+                            <mark>*</mark>
+                          </span>
+                          <input type="tel" name="dtel" placeholder="Телефон получателя" required="required" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">E-mail</span>
+                          <input type="email" name="dmail" placeholder="E-mail получателя" />
+                        </label>
+                        <label class="form42__row form42__row--third">
+                          <span class="form42__label">Город</span>
+                          <input type="text" name="dgor" placeholder="Город получателя" />
+                        </label>
+                      </div>
+                    </fieldset>
+                    <label class="form42__checkbox">
+                      <input type="checkbox" id="terms1" onclick="test_terms1()" name="terms"/>
+                      <span class="form42__checkbox-label">Я даю согласие на обработку своих персональных данных*</span>
+
+                      <a onclick="print($('#modal_okno'));" class="form42__print-btn " style="top: 92.5%; margin-right: 15px; cursor: pointer">
+                        <svg width="16" height="16" class="form42__print-icon"><use xlink:href="../img/sprite-icons.svg#print"></use></svg>
+                        Распечатать
+                      </a>
+
+                    </label>
+
+
+                    <div class="form42__result-bottom">
+                      <button id="but_zay" type="submit" class="btn btn--size-big btn--block" disabled>
+                        <span>ОТПРАВИТЬ ЗАЯВКУ</span>
+                      </button>
+                    </div>                 
+          </section>
+        </form>
+      </div>
+    </div>
+</div>
+
+        
+<!-- СКРИПТ РАССЧЁТА КАЛЬКУЛЯТОРА -->
+<script>
+  // 1-МСК 2-СПБ 3-НСК 4-КРС 5-ИРК 6-УУ
+  var price = [
+  //              min  0.1-1.5 -4.5   -7.5   -15    -26     +     40-300 -900   -1500  -3000  -5000    +
+  /*MSK - NSK*/  [260,  2700,  2650,  2600,  2550,  2500,  2400,  13.5,  13.2,  13.0,  12.7,  12.5,  12.0],
+  /*MSK - KRS*/  [400,  3750,  3700,  3650,  3590,  3500,  3450,  15,    14.9,  14.8,  14.7,  14.2,    14],
+  /*MSK - IRK*/  [460,  3860,  3810,  3760,  3660,  3600,  3550,  19.3,  19.1,  18.8,  18.3,  18.1,  17.8],
+  /*MSK - UU */  [1050, 5030,  4930,  4900,  4830,  4780,  4730,  25.2,  24.7,  24.4,  24.2,  23.9,  23.7],
+  /*SPB - KRS*/  [600,  4540,  4530,  4490,  4430,  4340,  4240,  22.6,  22.5,  22.3,  22.0,  21.6,  21.1],
+  /*SPB - NSK*/  [570,  3420,  3400,  3320,  3270,  3220,  3170,  14.1,  13.6,  13.5,  13.4,  13.1,  12.8],
+  /*SPB - IRK*/  [650,  4540,  4530,  4490,  4430,  4340,  4240,  22.6,  22.5,  22.3,  22.0,  21.6,  21.1],
+  /*SPB - UU */  [1050, 5570,  5420,  5310,  5160,  5060,  4960,  27.7,  26.9,  26.4,  25.7,  25.0,  24.4],
+  /*NSK - IRK*/  [260,  2020,  1970,  1920,  1870,  1820,  1770,  9.2,   9.0,   8.3,   8.0,   7.8,   7.2],
+  /*NSK - UU */  [670,  2740,  2710,  2640,  2570,  2490,  2430,  13.9,  13.4,  13.1,  12.8,  12.4,  12.1],
+  /*KRS - IRK*/  [200,  1500,  1480,  1450,  1400,  1300,  1200,  5.5,   5.4,   5.3,   5.2,   5.0,   5.0],
+  /*IRK - UU */  [420,  1880,  1820,  1770,  1720,  1670,  1620,  9.4,   9.1,   8.9,   8.6,   8.4,   8.1],
+  ];
+  
+  
+  function result() {
+    var otkuda_v = document.getElementById('otkuda').value
+    var kuda_v = document.getElementById('kuda').value
+    var obyom_v = document.getElementById('obyom').value
+    var ves_v = document.getElementById('massa').value
+    var i = 0;
+    var sum = 0;
+  
+  //СКРЫТИЕ ЭЛЕМЕНТОВ
+    if(otkuda_v == 1){
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[0].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[1].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[2].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[3].style.display="block";  
+    }
+    if(otkuda_v ==2){
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[0].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[1].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[2].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[3].style.display="block";
+    }
+    if(otkuda_v ==3){
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[0].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[1].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[2].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[3].style.display="block";
+    }
+    if(otkuda_v ==4){  
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[0].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[1].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[2].style.display="block";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[3].style.display="none";
+    }
+    if(otkuda_v ==5){  
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[0].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[1].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[2].style.display="none";
+      document.getElementsByClassName('select__list')[1].getElementsByClassName('select__item')[3].style.display="block";
+    }
+  
+   
+  // Выбор маршрута
+      if(otkuda_v == 1 && kuda_v == 3){i = 0;
+        $('.select__value')[2].innerText = "Москва";
+        $('.select__value')[3].innerText = "Новосибирск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 1 && kuda_v == 4){i = 1;
+        $('.select__value')[2].innerText = "Москва";
+        $('.select__value')[3].innerText = "Красноярск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 1 && kuda_v == 5){i = 2;
+        $('.select__value')[2].innerText = "Москва";
+        $('.select__value')[3].innerText = "Иркутск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 1 && kuda_v == 6){i = 3;
+        $('.select__value')[2].innerText = "Москва";
+        $('.select__value')[3].innerText = "Улан-Удэ";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 2 && kuda_v == 4){i = 4;
+        $('.select__value')[2].innerText = "Санкт-Петербург";
+        $('.select__value')[3].innerText = "Новосибирск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 2 && kuda_v == 3){i = 5;
+        $('.select__value')[2].innerText = "Санкт-Петербург";
+        $('.select__value')[3].innerText = "Красноярск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 2 && kuda_v == 5){i = 6;
+        $('.select__value')[2].innerText = "Санкт-Петербург";
+        $('.select__value')[3].innerText = "Иркутск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 2 && kuda_v == 6){i = 7;
+        $('.select__value')[2].innerText = "Санкт-Петербург";
+        $('.select__value')[3].innerText = "Улан-Удэ";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 3 && kuda_v == 5){i = 8;
+        $('.select__value')[2].innerText = "Новосибирск";
+        $('.select__value')[3].innerText = "Иркутск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 3 && kuda_v == 6){i = 9;
+        $('.select__value')[2].innerText = "Новосибирск";
+        $('.select__value')[3].innerText = "Улан-Удэ";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 4 && kuda_v == 5){i = 10;
+        $('.select__value')[2].innerText = "Красноярск";
+        $('.select__value')[3].innerText = "Иркутск";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(otkuda_v == 5 && kuda_v == 6){i = 11;    
+        $('.select__value')[2].innerText = "Иркутск";
+        $('.select__value')[3].innerText = "Улан-Удэ";
+        $('.is-placeholder').removeClass('is-placeholder');
+      }
+      if(
+        (otkuda_v == 3 && kuda_v != 5 && kuda_v != 6)  ||
+        (otkuda_v == 4 && kuda_v != 5)  ||
+        (otkuda_v == 5 && kuda_v != 6)                            
+    ){console.log("В этот город нет доставки")
+        document.getElementsByClassName('select__value')[1].innerText = "Куда";}
+    
+    // Минимальная стоимость
+    if(ves_v < 40 && obyom_v < 0.1) {sum = price[i][0];console.log('Минимальная стоимость');}
+    else{
+    //рассчёт по объёму
+        if(parseFloat(ves_v, 10)/parseFloat(obyom_v, 10) <= 200 ){
+          if(obyom_v >= 0.1 && obyom_v < 1.5){j=1}
+          if(obyom_v >= 1.5 && obyom_v < 4.5){j=2}
+          if(obyom_v >= 4.5 && obyom_v < 7.5){j=3}
+          if(obyom_v >= 7.5 && obyom_v < 15){j=4}
+          if(obyom_v >= 15  && obyom_v <= 25){j=5}
+          if(obyom_v > 25) {j=6}
+          sum = obyom_v*price[i][j];
+          console.log('рассчёт по объёму');
+        }
+        
+    //рассчёт по весу
+        if(parseFloat(ves_v, 10)/parseFloat(obyom_v, 10) > 200 ){
+          console.log(parseFloat(ves_v, 10)/parseFloat(obyom_v, 10));
+          if(ves_v >= 40   && ves_v < 300){j=7}
+          if(ves_v >= 300  && ves_v < 900){j=8}
+          if(ves_v >= 900  && ves_v < 1500){j=9}
+          if(ves_v >= 1500 && ves_v < 3000){j=10}
+          if(ves_v >= 3000 && ves_v < 5000){j=11}
+          if(ves_v > 5000){j=12}
+          sum = ves_v*price[i][j];
+          console.log('рассчёт по весу')
+          
+        }
+  }console.log(sum);
+   document.getElementById('rez').innerText = Math.trunc(sum);
+  
+  // Добавление значений в форму заявки
+  $('#mesto1 input')[0].value = obyom_v;
+  console.log('Объём добавлен')
+  $('#mesto1 input')[4].value = ves_v;
+  
+  // var ves_v = document.getElementById('massa').value
+  }
+  
+  // document.getElementById("otkuda").addEventListener("DOMSubtreeModified", function(){console.log('СТАРТУЕМ'); result()})
+  document.getElementById('otkuda').addEventListener('change', function(){result()})
+  document.getElementById('kuda').addEventListener('change', function(){result()})
+  document.getElementById('obyom').addEventListener('change', function(){result()})
+  document.getElementById('massa').addEventListener('change', function(){result()})
+  </script>
+
+<!-- Скрипт появления окна калькулятора -->
+<script>
+function opencalk(){
+  $('body').addClass('blur');
+  $('#modal_okno_calk').addClass('is-open')
+
+}
+</script>
+
+<!-- Закрытие калькулятора -->
+<script>
+  // через крест
+function closecalk(){
+  $('body').removeClass('blur');
+  $('#modal_okno_calk').removeClass('is-open')
+}
+// через клик вне зоны
+$(document).mouseup(function (e) {
+  var container = $('#modal_okno_content_calk');
+  if (container.has(e.target).length === 0){
+    $('body').removeClass('blur');
+    $('#modal_okno_calk').removeClass("is-open")
+    console.log('Скрытие Модального окна');
+  }
+});
+
+</script>
+
+
+<!-- Скрипт фикса для выпадающих городов -->
+<script>
+  window.onload = function() {
+    
+  // откуда в модалке
+  $('.select:eq(2)').css('z-index','6')
+  // куда в модалке
+  $('.select:eq(3)').css('z-index','5')
+  // откуда в калькуляторе
+  $('.select:eq(0)').css('z-index','5')
+  };
+  </script>
+
+<!-- Скрипты всплывающих окон -->
+<script>
+  document.getElementById('hider1').onclick = function() {
+    var el=document.getElementById('zabrat');
+        console.log(el.style.display);
+        if(el.style.display=="block"){el.style.display="none";} 
+        else {el.style.display="block";}
+  }
+  
+  document.getElementById('hider2').onclick = function() {
+        var el1=document.getElementById('otdat');
+        console.log(el1.style.display);
+        if(el1.style.display=="block"){el1.style.display="none";} 
+        else {el1.style.display="block";}
+    }
+  </script>
+
+<!-- Скрипт выбора отправителя/получателя -->
+<script>
+function showur(){
+  $('#ur_men').addClass('colonka');
+  $('#ur_men').removeClass('none_block');
+  $('#fiz_men').removeClass('colonka');
+  $('#fiz_men').addClass('none_block');
+  $('#fiz_men_title').addClass('none_active_text');
+  $('#ur_men_title').removeClass('none_active_text');
+  $('#fiz_men input').removeAttr('required')
+  $('#ur_men input').attr('required','required')
+  console.log('Я РАБОТАЮ')
+}
+$(function(){$('#ur_person').on('click', showur);})
+
+function showfiz(){
+  $('#fiz_men').addClass('colonka');
+  $('#fiz_men').removeClass('none_block');
+  $('#ur_men').addClass('none_block');
+  $('#ur_men').removeClass('colonka');
+  $('#ur_men_title').addClass('none_active_text');
+  $('#fiz_men_title').removeClass('none_active_text');
+  $('#ur_men input').removeAttr('required');
+  $('#fiz_men input').attr('required','required');
+}
+$(function(){$('#fiz_person').on('click', showfiz);})
+
+function showur1(){
+  $('#ur_men1').addClass('colonka');
+  $('#ur_men1').removeClass('none_block');
+  $('#fiz_men1').removeClass('colonka');
+  $('#fiz_men1').addClass('none_block');
+  $('#fiz_men_title1').addClass('none_active_text');
+  $('#ur_men_title1').removeClass('none_active_text');
+  $('#fiz_men1 input').removeAttr('required')
+  $('#ur_men1 input').attr('required','required')  
+}
+$(function(){$('#ur_person1').on('click', showur1);})
+
+function showfiz1(){
+  $('#fiz_men1').addClass('colonka');
+  $('#fiz_men1').removeClass('none_block');
+  $('#ur_men1').addClass('none_block');
+  $('#ur_men1').removeClass('colonka');
+  $('#ur_men_title1').addClass('none_active_text');
+  $('#fiz_men_title1').removeClass('none_active_text');
+  $('#ur_men1 input').removeAttr('required')
+  $('#fiz_men1 input').attr('required','required');
+}
+$(function(){$('#fiz_person1').on('click', showfiz1);})
+</script>
+
+<!-- Скрипт открытия модального окна заявки  -->
+<script>
+  function open_modal(){
+    $('body').addClass('blur');
+    $('#modal_okno').addClass('is-open')
+  
+  }
+</script>
+  
+<!-- Закрытие модального окна  заявки-->
+<script>
+    // через крест
+  function close_modal(){
+    $('body').removeClass('blur');
+    $('#modal_okno').removeClass('is-open')
+  }
+
+  // Через клик вне зоны
+  $(document).mouseup(function (e) {
+  var container = $('#modal_okno_content');
+  var container1 = $('#ui-datepicker-div');
+  
+    if (container.has(e.target).length === 0 && container1.has(e.target).length === 0){
+      $('body').removeClass('blur');
+      $('#modal_okno').removeClass("is-open")
+    }
+  });
+  
+</script>
+
+<!-- Скрипт добавления и уменьшения одинаковых мест -->
+<script>
+  function umF1(){if(+document.getElementById("odin_mest1").value > 1){
+  document.getElementById("odin_mest1").value=+document.getElementById("odin_mest1").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF1(){ document.getElementById("odin_mest1").value=+document.getElementById("odin_mest1").value+1; }
+
+  function umF2(){if(+document.getElementById("odin_mest2").value > 1){
+  document.getElementById("odin_mest2").value=+document.getElementById("odin_mest2").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF2(){ document.getElementById("odin_mest2").value=+document.getElementById("odin_mest2").value+1; }
+
+  function umF3(){if(+document.getElementById("odin_mest3").value > 1){
+  document.getElementById("odin_mest3").value=+document.getElementById("odin_mest3").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF3(){ document.getElementById("odin_mest3").value=+document.getElementById("odin_mest3").value+1; }
+
+  function umF4(){if(+document.getElementById("odin_mest4").value > 1){
+  document.getElementById("odin_mest4").value=+document.getElementById("odin_mest4").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF4(){ document.getElementById("odin_mest4").value=+document.getElementById("odin_mest4").value+1; }
+
+  function umF5(){if(+document.getElementById("odin_mest5").value > 1){
+  document.getElementById("odin_mest5").value=+document.getElementById("odin_mest5").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF5(){ document.getElementById("odin_mest5").value=+document.getElementById("odin_mest5").value+1; }
+
+  function umF6(){if(+document.getElementById("odin_mest6").value > 1){
+  document.getElementById("odin_mest6").value=+document.getElementById("odin_mest6").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF6(){ document.getElementById("odin_mest6").value=+document.getElementById("odin_mest6").value+1; }
+
+  function umF7(){if(+document.getElementById("odin_mest7").value > 1){
+  document.getElementById("odin_mest7").value=+document.getElementById("odin_mest7").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF7(){ document.getElementById("odin_mest7").value=+document.getElementById("odin_mest7").value+1; }
+
+  function umF8(){if(+document.getElementById("odin_mest8").value > 1){
+  document.getElementById("odin_mest8").value=+document.getElementById("odin_mest8").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF8(){ document.getElementById("odin_mest8").value=+document.getElementById("odin_mest8").value+1; }
+
+  function umF9(){if(+document.getElementById("odin_mest9").value > 1){
+  document.getElementById("odin_mest9").value=+document.getElementById("odin_mest9").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF9(){ document.getElementById("odin_mest9").value=+document.getElementById("odin_mest9").value+1; }
+
+  function umF10(){if(+document.getElementById("odin_mest10").value > 1){
+  document.getElementById("odin_mest10").value=+document.getElementById("odin_mest10").value-1;
+  }else{console.log('Мест не может быть меньше нуля') } }
+  function addF10(){ document.getElementById("odin_mest10").value=+document.getElementById("odin_mest10").value+1; }
+  
+  $(function() {$('#min_odin1').on('click', umF1);})
+  $(function() {$('#max_odin1').on('click', addF1);})
+
+  $(function() {$('#min_odin2').on('click', umF2);})
+  $(function() {$('#max_odin2').on('click', addF2);})
+
+  $(function() {$('#min_odin3').on('click', umF3);})
+  $(function() {$('#max_odin3').on('click', addF3);})
+
+  $(function() {$('#min_odin4').on('click', umF4);})
+  $(function() {$('#max_odin4').on('click', addF4);})
+
+  $(function() {$('#min_odin5').on('click', umF5);})
+  $(function() {$('#max_odin5').on('click', addF5);})
+
+  $(function() {$('#min_odin6').on('click', umF6);})
+  $(function() {$('#max_odin6').on('click', addF6);})
+
+  $(function() {$('#min_odin7').on('click', umF7);})
+  $(function() {$('#max_odin7').on('click', addF7);})
+
+  $(function() {$('#min_odin8').on('click', umF8);})
+  $(function() {$('#max_odin8').on('click', addF8);})
+
+  $(function() {$('#min_odin9').on('click', umF9);})
+  $(function() {$('#max_odin9').on('click', addF9);})
+
+  $(function() {$('#min_odin10').on('click', umF10);})
+  $(function() {$('#max_odin10').on('click', addF10);})
+
+</script>
+
+<!-- Скрипт подсчёта общего объёма/веса -->
+<script>
+function oob1(){
+  $('#ob1')[0].innerText=+$('#mesto1 .text-center')[0].value*(+$('#odin_mest1')[0].value);
+  $('#ob11')[0].innerText=+$('#mesto1 .text-center')[1].value*+$('#mesto1 .text-center')[2].value*+$('#mesto1 .text-center')[3].value* 
+  (+$('#odin_mest1')[0].value);
+  $('#ov1')[0].innerText=+$('#mesto1 .text-center')[4].value*(+$('#odin_mest1')[0].value);
+}
+function oob2(){
+  $('#ob2')[0].innerText=+$('#mesto2 .text-center')[0].value*(+$('#odin_mest2')[0].value);
+  $('#ob21')[0].innerText=+$('#mesto2 .text-center')[1].value*+$('#mesto2 .text-center')[2].value*+$('#mesto2 .text-center')[3].value* 
+  (+$('#odin_mest2')[0].value);
+  $('#ov2')[0].innerText=+$('#mesto2 .text-center')[4].value*(+$('#odin_mest2')[0].value);
+}
+function oob3(){
+  $('#ob3')[0].innerText=+$('#mesto3 .text-center')[0].value*(+$('#odin_mest3')[0].value);
+  $('#ob31')[0].innerText=+$('#mesto3 .text-center')[1].value*+$('#mesto3 .text-center')[2].value*+$('#mesto3 .text-center')[3].value* 
+  (+$('#odin_mest3')[0].value);
+  $('#ov3')[0].innerText=+$('#mesto3 .text-center')[4].value*(+$('#odin_mest3')[0].value);
+}
+function oob4(){
+  $('#ob4')[0].innerText=+$('#mesto4 .text-center')[0].value*(+$('#odin_mest4')[0].value);
+  $('#ob41')[0].innerText=+$('#mesto4 .text-center')[1].value*+$('#mesto4 .text-center')[2].value*+$('#mesto4 .text-center')[3].value* 
+  (+$('#odin_mest4')[0].value);
+  $('#ov4')[0].innerText=+$('#mesto4 .text-center')[4].value*(+$('#odin_mest4')[0].value);
+}
+function oob5(){
+  $('#ob5')[0].innerText=+$('#mesto5 .text-center')[0].value*(+$('#odin_mest5')[0].value);
+  $('#ob51')[0].innerText=+$('#mesto5 .text-center')[1].value*+$('#mesto5 .text-center')[2].value*+$('#mesto5 .text-center')[3].value* 
+  (+$('#odin_mest5')[0].value);
+  $('#ov5')[0].innerText=+$('#mesto5 .text-center')[4].value*(+$('#odin_mest5')[0].value);
+}
+function oob6(){
+  $('#ob6')[0].innerText=+$('#mesto6 .text-center')[0].value*(+$('#odin_mest6')[0].value);
+  $('#ob61')[0].innerText=+$('#mesto6 .text-center')[1].value*+$('#mesto6 .text-center')[2].value*+$('#mesto6 .text-center')[3].value* 
+  (+$('#odin_mest6')[0].value);
+  $('#ov6')[0].innerText=+$('#mesto6 .text-center')[4].value*(+$('#odin_mest6')[0].value);
+}
+function oob7(){
+  $('#ob7')[0].innerText=+$('#mesto7 .text-center')[0].value*(+$('#odin_mest7')[0].value);
+  $('#ob71')[0].innerText=+$('#mesto7 .text-center')[1].value*+$('#mesto7 .text-center')[2].value*+$('#mesto7 .text-center')[3].value* 
+  (+$('#odin_mest7')[0].value);
+  $('#ov7')[0].innerText=+$('#mesto7 .text-center')[4].value*(+$('#odin_mest7')[0].value);
+}
+function oob8(){
+  $('#ob8')[0].innerText=+$('#mesto8 .text-center')[0].value*(+$('#odin_mest8')[0].value);
+  $('#ob81')[0].innerText=+$('#mesto8 .text-center')[1].value*+$('#mesto8 .text-center')[2].value*+$('#mesto8 .text-center')[3].value* 
+  (+$('#odin_mest8')[0].value);
+  $('#ov8')[0].innerText=+$('#mesto8 .text-center')[4].value*(+$('#odin_mest8')[0].value);
+}
+function oob9(){
+  $('#ob9')[0].innerText=+$('#mesto9 .text-center')[0].value*(+$('#odin_mest9')[0].value);
+  $('#ob91')[0].innerText=+$('#mesto9 .text-center')[1].value*+$('#mesto9 .text-center')[2].value*+$('#mesto9 .text-center')[3].value* 
+  (+$('#odin_mest9')[0].value);
+  $('#ov9')[0].innerText=+$('#mesto9 .text-center')[4].value*(+$('#odin_mest9')[0].value);
+}
+function oob10(){
+  $('#ob10')[0].innerText=+$('#mesto10 .text-center')[0].value*(+$('#odin_mest10')[0].value);
+  $('#ob101')[0].innerText=+$('#mesto10 .text-center')[1].value*+$('#mesto10 .text-center')[2].value*+$('#mesto10 .text-center')[3].value* 
+  (+$('#odin_mest10')[0].value);
+  $('#ov10')[0].innerText=+$('#mesto10 .text-center')[4].value*(+$('#odin_mest10')[0].value);
+}
+
+
+
+// срабатывание по изменению объёма/веса
+// тут говнокод
+$('#mesto1 .text-center')[0].addEventListener('change', function(){oob1()})
+$('#mesto1 .text-center')[1].addEventListener('change', function(){oob1()})
+$('#mesto1 .text-center')[2].addEventListener('change', function(){oob1()})
+$('#mesto1 .text-center')[3].addEventListener('change', function(){oob1()})
+$('#mesto1 .text-center')[4].addEventListener('change', function(){oob1()})
+
+$('#mesto2 .text-center')[0].addEventListener('change', function(){oob2()})
+$('#mesto2 .text-center')[1].addEventListener('change', function(){oob2()})
+$('#mesto2 .text-center')[2].addEventListener('change', function(){oob2()})
+$('#mesto2 .text-center')[3].addEventListener('change', function(){oob2()})
+$('#mesto2 .text-center')[4].addEventListener('change', function(){oob2()})
+
+$('#mesto3 .text-center')[0].addEventListener('change', function(){oob3()})
+$('#mesto3 .text-center')[1].addEventListener('change', function(){oob3()})
+$('#mesto3 .text-center')[2].addEventListener('change', function(){oob3()})
+$('#mesto3 .text-center')[3].addEventListener('change', function(){oob3()})
+$('#mesto3 .text-center')[4].addEventListener('change', function(){oob3()})
+
+$('#mesto4 .text-center')[0].addEventListener('change', function(){oob4()})
+$('#mesto4 .text-center')[1].addEventListener('change', function(){oob4()})
+$('#mesto4 .text-center')[2].addEventListener('change', function(){oob4()})
+$('#mesto4 .text-center')[3].addEventListener('change', function(){oob4()})
+$('#mesto4 .text-center')[4].addEventListener('change', function(){oob4()})
+
+$('#mesto5 .text-center')[0].addEventListener('change', function(){oob5()})
+$('#mesto5 .text-center')[1].addEventListener('change', function(){oob5()})
+$('#mesto5 .text-center')[2].addEventListener('change', function(){oob5()})
+$('#mesto5 .text-center')[3].addEventListener('change', function(){oob5()})
+$('#mesto5 .text-center')[4].addEventListener('change', function(){oob5()})
+
+$('#mesto6 .text-center')[0].addEventListener('change', function(){oob6()})
+$('#mesto6 .text-center')[1].addEventListener('change', function(){oob6()})
+$('#mesto6 .text-center')[2].addEventListener('change', function(){oob6()})
+$('#mesto6 .text-center')[3].addEventListener('change', function(){oob6()})
+$('#mesto6 .text-center')[4].addEventListener('change', function(){oob6()})
+
+$('#mesto7 .text-center')[0].addEventListener('change', function(){oob7()})
+$('#mesto7 .text-center')[1].addEventListener('change', function(){oob7()})
+$('#mesto7 .text-center')[2].addEventListener('change', function(){oob7()})
+$('#mesto7 .text-center')[3].addEventListener('change', function(){oob7()})
+$('#mesto7 .text-center')[4].addEventListener('change', function(){oob7()})
+
+$('#mesto8 .text-center')[0].addEventListener('change', function(){oob8()})
+$('#mesto8 .text-center')[1].addEventListener('change', function(){oob8()})
+$('#mesto8 .text-center')[2].addEventListener('change', function(){oob8()})
+$('#mesto8 .text-center')[3].addEventListener('change', function(){oob8()})
+$('#mesto8 .text-center')[4].addEventListener('change', function(){oob8()})
+
+$('#mesto9 .text-center')[0].addEventListener('change', function(){oob9()})
+$('#mesto9 .text-center')[1].addEventListener('change', function(){oob9()})
+$('#mesto9 .text-center')[2].addEventListener('change', function(){oob9()})
+$('#mesto9 .text-center')[3].addEventListener('change', function(){oob9()})
+$('#mesto9 .text-center')[4].addEventListener('change', function(){oob9()})
+
+$('#mesto10 .text-center')[0].addEventListener('change', function(){oob10()})
+$('#mesto10 .text-center')[1].addEventListener('change', function(){oob10()})
+$('#mesto10 .text-center')[2].addEventListener('change', function(){oob10()})
+$('#mesto10 .text-center')[3].addEventListener('change', function(){oob10()})
+$('#mesto10 .text-center')[4].addEventListener('change', function(){oob10()})
+
+
+
+// СРАБАТЫВАНИЕ ПО ДОБАВЛЕНИЮ ОДИНАКОВОГО МЕСТА
+$(function() {$('#min_odin1').on('click', oob1);})
+    $(function() {$('#max_odin1').on('click', oob1);})
+
+    $(function() {$('#min_odin2').on('click', oob2);})
+    $(function() {$('#max_odin2').on('click', oob2);})
+
+    $(function() {$('#min_odin3').on('click', oob3);})
+    $(function() {$('#max_odin3').on('click', oob3);})
+
+    $(function() {$('#min_odin4').on('click', oob4);})
+    $(function() {$('#max_odin4').on('click', oob4);})
+
+    $(function() {$('#min_odin5').on('click', oob5);})
+    $(function() {$('#max_odin5').on('click', oob5);})
+
+    $(function() {$('#min_odin6').on('click', oob6);})
+    $(function() {$('#max_odin6').on('click', oob6);})
+
+    $(function() {$('#min_odin7').on('click', oob7);})
+    $(function() {$('#max_odin7').on('click', oob7);})
+
+    $(function() {$('#min_odin8').on('click', oob8);})
+    $(function() {$('#max_odin8').on('click', oob8);})
+
+    $(function() {$('#min_odin9').on('click', oob9);})
+    $(function() {$('#max_odin9').on('click', oob9);})
+
+    $(function() {$('#min_odin10').on('click', oob10);})
+    $(function() {$('#max_odin10').on('click', oob10);})
+
+</script>
+
+<!-- Скрипт скрытия городов в заявке -->
+<script>
+    function hidegor() {
+      var otkuda_v = document.getElementById('otkudamd').value
+      var kuda_v = document.getElementById('kudamd').value
+
+      if(otkuda_v == 1){
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[0].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[1].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[2].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[3].style.display="block";  
+      }
+      if(otkuda_v ==2){
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[0].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[1].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[2].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[3].style.display="block";
+      }
+      if(otkuda_v ==3){
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[0].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[1].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[2].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[3].style.display="block";
+      }
+      if(otkuda_v ==4){  
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[0].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[1].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[2].style.display="block";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[3].style.display="none";
+      }
+      if(otkuda_v ==5){  
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[0].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[1].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[2].style.display="none";
+        document.getElementsByClassName('select__list')[3].getElementsByClassName('select__item')[3].style.display="block";
+      }
+    
+      if(otkuda_v == 1 && kuda_v == 3){i = 0;}
+      if(otkuda_v == 1 && kuda_v == 4){i = 1;}
+      if(otkuda_v == 1 && kuda_v == 5){i = 2;}
+      if(otkuda_v == 1 && kuda_v == 6){i = 3;}
+      if(otkuda_v == 2 && kuda_v == 4){i = 4;}
+      if(otkuda_v == 2 && kuda_v == 3){i = 5;}
+      if(otkuda_v == 2 && kuda_v == 5){i = 6;}
+      if(otkuda_v == 2 && kuda_v == 6){i = 7;}
+      if(otkuda_v == 3 && kuda_v == 5){i = 8;}
+      if(otkuda_v == 3 && kuda_v == 6){i = 9;}
+      if(otkuda_v == 4 && kuda_v == 5){i = 10;}
+      if(otkuda_v == 5 && kuda_v == 6){i = 11;}
+      if(
+        (otkuda_v == 3 && kuda_v != 5 && kuda_v != 6)  ||
+        (otkuda_v == 4 && kuda_v != 5)  ||
+        (otkuda_v == 5 && kuda_v != 6)                            
+    ){
+        console.log("В этот город нет доставки")
+        document.getElementsByClassName('select__value')[3].innerText = "Куда";
+      }    
+      $('#otkudIn').val($('.select__value:eq(2)').text())
+      $('#kudIn').val($('.select__value:eq(3)').text())  
+    }
+    
+    document.getElementById('otkudamd').addEventListener('change', function(){hidegor()})
+    document.getElementById('kudamd').addEventListener('change', function(){hidegor()})
+</script>
+
+<!-- Скрипт для календаря -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$.datepicker.regional['ru'] = {
+closeText: 'Закрыть',
+prevText: '&#x3c;Пред',
+nextText: 'След&#x3e;',
+currentText: 'Сегодня',
+monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+'Июл','Авг','Сен','Окт','Ноя','Дек'],
+dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+dateFormat: 'dd.mm.yy',
+firstDay: 1,
+isRTL: false
+};
+$.datepicker.setDefaults($.datepicker.regional['ru']);
+$( function() {  $( "#datecalend" ).datepicker();} );
+$( function() {  $( "#datecalendout" ).datepicker();} );
+</script>
+
+<!-- Скрипт удаления мест -->
+<script>
+     function del1(){$('#mesto1').addClass('hide');}
+     function del2(){$('#mesto2').addClass('hide');}
+     function del3(){$('#mesto3').addClass('hide');}
+     function del4(){$('#mesto4').addClass('hide');}
+     function del5(){$('#mesto5').addClass('hide');}
+     function del6(){$('#mesto6').addClass('hide');}
+     function del7(){$('#mesto7').addClass('hide');}
+     function del8(){$('#mesto8').addClass('hide');}
+     function del9(){$('#mesto9').addClass('hide');}
+     function del10(){$('#mesto10').addClass('hide');}
+</script>
+
+<!-- Скрипт добавления мест -->
+<script>
+function addmesto(){
+  $('.hide').first().removeClass('hide')
+}
+</script>
+
+<!-- Скрипт переключателя Габариты/объём-->
+<script>
+// 1место
+function perekF1(){ 
+      if($('.obyom1').css('display')=="block"){
+        $('.touch1').css('margin','20px 2px');
+        $('.obtext1').css('color','#B3B3B3');
+        $('.gabtext1').css('color','#000');
+        $('.obyom1').css('display','none');
+        $('.gabar1').css('display','inline-block'); 
+          } 
+      else{
+        $('.obyom1').css('display','inline-block'); 
+        $('.gabar1').css('display','none'); 
+        $('.touch1').css('margin', '2px');
+        $('.obtext1').css('color','#000');
+        $('.gabtext1').css('color','#B3B3B3');
+      }
+ }
+//  2 место
+function perekF2(){ 
+          if($('.obyom2').css('display')=="block"){
+             $('.touch2').css('margin','20px 2px');
+             $('.obtext2').css('color','#B3B3B3');
+             $('.gabtext2').css('color','#000');
+             $('.obyom2').css('display','none');
+             $('.gabar2').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom2').css('display','inline-block'); 
+             $('.gabar2').css('display','none'); 
+             $('.touch2').css('margin', '2px');
+             $('.obtext2').css('color','#000');
+             $('.gabtext2').css('color','#B3B3B3');
+          }
+     }
+// 3 место
+function perekF3(){ 
+          if($('.obyom3').css('display')=="block"){
+             $('.touch3').css('margin','20px 2px');
+             $('.obtext3').css('color','#B3B3B3');
+             $('.gabtext3').css('color','#000');
+             $('.obyom3').css('display','none');
+             $('.gabar3').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom3').css('display','inline-block'); 
+             $('.gabar3').css('display','none'); 
+             $('.touch3').css('margin', '2px');
+             $('.obtext3').css('color','#000');
+             $('.gabtext3').css('color','#B3B3B3');
+          }
+     }
+// 4 место
+function perekF4(){ 
+          if($('.obyom4').css('display')=="block"){
+             $('.touch4').css('margin','20px 2px');
+             $('.obtext4').css('color','#B3B3B3');
+             $('.gabtext4').css('color','#000');
+             $('.obyom4').css('display','none');
+             $('.gabar4').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom4').css('display','inline-block'); 
+             $('.gabar4').css('display','none'); 
+             $('.touch4').css('margin', '2px');
+             $('.obtext4').css('color','#000');
+             $('.gabtext4').css('color','#B3B3B3');
+          }
+     }
+// 5 место
+function perekF5(){ 
+          if($('.obyom5').css('display')=="block"){
+             $('.touch5').css('margin','20px 2px');
+             $('.obtext5').css('color','#B3B3B3');
+             $('.gabtext5').css('color','#000');
+             $('.obyom5').css('display','none');
+             $('.gabar5').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom5').css('display','inline-block'); 
+             $('.gabar5').css('display','none'); 
+             $('.touch5').css('margin', '2px');
+             $('.obtext5').css('color','#000');
+             $('.gabtext5').css('color','#B3B3B3');
+          }
+     }
+// 6 место
+function perekF6(){ 
+          if($('.obyom6').css('display')=="block"){
+             $('.touch6').css('margin','20px 2px');
+             $('.obtext6').css('color','#B3B3B3');
+             $('.gabtext6').css('color','#000');
+             $('.obyom6').css('display','none');
+             $('.gabar6').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom6').css('display','inline-block'); 
+             $('.gabar6').css('display','none'); 
+             $('.touch6').css('margin', '2px');
+             $('.obtext6').css('color','#000');
+             $('.gabtext6').css('color','#B3B3B3');
+          }
+     }
+// 7 место
+function perekF7(){ 
+          if($('.obyom7').css('display')=="block"){
+             $('.touch7').css('margin','20px 2px');
+             $('.obtext7').css('color','#B3B3B3');
+             $('.gabtext7').css('color','#000');
+             $('.obyom7').css('display','none');
+             $('.gabar7').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom7').css('display','inline-block'); 
+             $('.gabar7').css('display','none'); 
+             $('.touch7').css('margin', '2px');
+             $('.obtext7').css('color','#000');
+             $('.gabtext7').css('color','#B3B3B3');
+          }
+     }
+// 8 место
+function perekF8(){ 
+          if($('.obyom8').css('display')=="block"){
+             $('.touch8').css('margin','20px 2px');
+             $('.obtext8').css('color','#B3B3B3');
+             $('.gabtext8').css('color','#000');
+             $('.obyom8').css('display','none');
+             $('.gabar8').css('display','inline-block'); 
+             console.log("8 переключатель")
+              } 
+          else{
+             $('.obyom8').css('display','inline-block'); 
+             $('.gabar8').css('display','none'); 
+             $('.touch8').css('margin', '2px');
+             $('.obtext8').css('color','#000');
+             $('.gabtext8').css('color','#B3B3B3');
+             console.log("8 переключатель элесе")
+          }
+     }
+// 9 место
+function perekF9(){ 
+          if($('.obyom9').css('display')=="block"){
+             $('.touch9').css('margin','20px 2px');
+             $('.obtext9').css('color','#B3B3B3');
+             $('.gabtext9').css('color','#000');
+             $('.obyom9').css('display','none');
+             $('.gabar9').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom9').css('display','inline-block'); 
+             $('.gabar9').css('display','none'); 
+             $('.touch9').css('margin', '2px');
+             $('.obtext9').css('color','#000');
+             $('.gabtext9').css('color','#B3B3B3');
+          }
+     }
+// 10 место
+function perekF10(){ 
+          if($('.obyom10').css('display')=="block"){
+             $('.touch10').css('margin','20px 2px');
+             $('.obtext10').css('color','#B3B3B3');
+             $('.gabtext10').css('color','#000');
+             $('.obyom10').css('display','none');
+             $('.gabar10').css('display','inline-block'); 
+              } 
+          else{
+             $('.obyom10').css('display','inline-block'); 
+             $('.gabar10').css('display','none'); 
+             $('.touch10').css('margin', '2px');
+             $('.obtext10').css('color','#000');
+             $('.gabtext10').css('color','#B3B3B3');
+          }
+     }
+
+$(function() {$('.perekl1').on('click', perekF1);})
+$(function() {$('.perekl2').on('click', perekF2);})
+$(function() {$('.perekl3').on('click', perekF3);})
+$(function() {$('.perekl4').on('click', perekF4);})
+$(function() {$('.perekl5').on('click', perekF5);})
+$(function() {$('.perekl6').on('click', perekF6);})
+$(function() {$('.perekl7').on('click', perekF7);})
+$(function() {$('.perekl8').on('click', perekF8);})
+$(function() {$('.perekl9').on('click', perekF9);})
+$(function() {$('.perekl10').on('click', perekF10);})
+</script>
+
+<!-- Скрипт убирающий z-index -->
+<script>
+  $('#hide_md .select').css('z-index', 1 );
+</script>
+
+<!-- Проверка согласия на обработку данных -->
+<script>
+  function test_terms1(){
+    if($('#terms1').prop("checked") == true ){
+      $('#but_zay').removeAttr('disabled');
+    }else{
+      $('#but_zay').attr('disabled','')
+      }
+    }
+</script>
+
+  <script>
+    var swiperOptions = {
+      documents: {
+        loop: true,
+        pagination: {
+          el: ".documents__pages",
+          type: "custom",
+          renderCustom: function (swiper, current, total) {
+            return current + "/" + total;
+          }
+        }
+      }
+    };
+
+  </script>
+<script>
+/*$(window).load(function() {
+	if ($(document).width() < 750){
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('.auto_mob_head').removeClass('none_block')
+		}
+});*/
+$(window).on('load',function() {
+	if ($(window).width() < 749){
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('.auto_mob_head').removeClass('none_block')
+	}
+});
+
+function desctopWindow() {
+	if ($(window).width() > 731){
+		$('td').removeClass('none_block')	
+	} 
+	 else{
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')
+	}
+	
+}; 
+window.addEventListener("resize", desctopWindow);
+$( "#tr1" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr1').children('td').removeClass('none_block')
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+$( "#tr2" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr2').children('td').removeClass('none_block')
+		$('#tr1').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+$( "#tr3" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr3').children('td').removeClass('none_block')
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr1').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+$( "#tr4" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr4').children('td').removeClass('none_block')
+		$('#tr1').children('td').addClass('none_block')
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+$( "#tr5" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr5').children('td').removeClass('none_block')
+		$('#tr1').children('td').addClass('none_block')
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr6').children('td').addClass('none_block')
+		$('#tr6').removeClass('last_row')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+$( "#tr6" ).click(function() {
+  if ($(window).width() < 749){
+		$('#tr6').children('td').removeClass('none_block')
+		$('#tr6').addClass('last_row')
+		$('#tr1').children('td').addClass('none_block')
+		$('#tr2').children('td').addClass('none_block')
+		$('#tr3').children('td').addClass('none_block')
+		$('#tr4').children('td').addClass('none_block')
+		$('#tr5').children('td').addClass('none_block')
+		$('.auto_mob_head').removeClass('none_block')		
+}});
+</script>
+  <script src="../js/main.bundle.b0cd.js" defer></script>
+
+  <script>
+    $(function(){
+    $('.form42__point1 .select__value').css('background-image','url("../img/dotA.png")');
+    $('.form42__point2 .select__value').css('background-image','url("../img/dotB.png")');
+    });
+    </script>
+
+
+  <noscript>Этот сайт использует JavaScript. Пожалуйста, включите JavaScript в Вашем браузере.</noscript>
+</body>
+
+</html>
